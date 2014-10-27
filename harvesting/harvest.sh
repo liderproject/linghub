@@ -35,7 +35,7 @@ datahub() {
     do
         DATASET_NAME="${f/%.rdf/}"
         echo "Dataset: $DATASET_NAME"
-        rapper -o ntriples $f 2>/dev/null | perl -p -e 's/http\/\/datahub.io\/dataset/http:\/\/$LINGHUB\/datahub/g' | python ../fix-urls.py "http://$LINGHUB/datahub/$DATASET_NAME#" | gzip >> ../../linghub.nt.gz
+        rapper -o ntriples $f 2>/dev/null | perl -p -e 's/http:\/\/datahub.io\/dataset/http:\/\/$LINGHUB\/datahub/g' | python ../fix-urls.py "http://$LINGHUB/datahub/$DATASET_NAME#" | gzip >> ../../linghub.nt.gz
         echo "<http://$LINGHUB/datahub/$DATASET_NAME> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://datahub.io/dataset/$DATASET_NAME> . " | gzip >> ../../linghub.nt.gz
 
     done
