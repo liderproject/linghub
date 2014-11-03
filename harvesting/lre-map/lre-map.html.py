@@ -111,6 +111,7 @@ if __name__ == "__main__":
        <dcat:Distribution rdf:about='%s#Distribution'>
         <dcat:accessURL>%s</dcat:accessURL>
       </dcat:Distribution>
+      <dc:source>LRE Map</dc:source>
     </dcat:distribution>
 """ % (data["ID"], escape(v)))
                         

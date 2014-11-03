@@ -37,6 +37,7 @@ datahub() {
         echo "Dataset: $DATASET_NAME"
         rapper -o ntriples $f 2>/dev/null | perl -p -e "s/http:\/\/datahub.io\/dataset/http:\/\/$LINGHUB\/datahub/g" | python ../fix-urls.py "http://$LINGHUB/datahub/$DATASET_NAME#" | gzip >> ../../linghub.nt.gz
         echo "<http://$LINGHUB/datahub/$DATASET_NAME> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://datahub.io/dataset/$DATASET_NAME> . " | gzip >> ../../linghub.nt.gz
+        echo "<http://$LINGHUB/datahub/$DATASET_NAME> <http://purl.org/dc/elements/1.1/source> \"DataHub\" . " | gzip >> ../../linghub.nt.gz
 
     done
     cd ../../
@@ -93,6 +94,7 @@ clarin() {
         echo "Resource: $RES_NAME"
         xsltproc clarin2dcat.xsl $f | rapper -o ntriples -I http://$LINGHUB/clarin/$RES_NAME - 2>/dev/null |  gzip >> ../linghub.nt.gz
         echo "<http://$LINGHUB/clarin/$RES_NAME> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://catalog.clarin.eu/oai-harvester/others/results/cmdi/$RES_NAME.xml> ." | gzip >> ../linghub.nt.gz
+        echo "<http://$LINGHUB/clarin/$RES_NAME> <http://purl.org/dc/elements/1.1/source> \"CLARIN\" ." | gzip >> ../linghub.nt.gz
     done
     cd ..
 }
