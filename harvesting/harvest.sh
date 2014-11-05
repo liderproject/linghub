@@ -9,12 +9,12 @@ check() {
 }
 
 clean() {
-    if [ -e linghub.nt.gz ] 
-    then
-        rm linghub.nt.gz
-    fi
-    touch linghub.nt.gz
+    rm -f linghub.nt.gz datahub/datahub.nt.gz clarin/clarin.nt.gz lremap/lremap.nt.gz metashare/metashare.nt.gz
     echo "Clean" 
+}
+
+compile() {
+    cat datahub/datahub.nt.gz clarin/clarin.nt.gz lremap/lremap.nt.gz metashare/metashare.nt.gz > linghub.nt.gz
 }
 
 datahub() {
@@ -35,9 +35,9 @@ datahub() {
     do
         DATASET_NAME="${f/%.rdf/}"
         echo "Dataset: $DATASET_NAME"
-        rapper -o ntriples $f 2>/dev/null | perl -p -e "s/http:\/\/datahub.io\/dataset/http:\/\/$LINGHUB\/datahub/g" | python ../fix-urls.py "http://$LINGHUB/datahub/$DATASET_NAME#" | gzip >> ../../linghub.nt.gz
-        echo "<http://$LINGHUB/datahub/$DATASET_NAME> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://datahub.io/dataset/$DATASET_NAME> . " | gzip >> ../../linghub.nt.gz
-        echo "<http://$LINGHUB/datahub/$DATASET_NAME> <http://purl.org/dc/elements/1.1/source> \"DataHub\" . " | gzip >> ../../linghub.nt.gz
+        rapper -o ntriples $f 2>/dev/null | perl -p -e "s/http:\/\/datahub.io\/dataset/http:\/\/$LINGHUB\/datahub/g" | python ../fix-urls.py "http://$LINGHUB/datahub/$DATASET_NAME#" | gzip >> ../datahub.nt.gz
+        echo "<http://$LINGHUB/datahub/$DATASET_NAME> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://datahub.io/dataset/$DATASET_NAME> . " | gzip >> ../datahub.nt.gz
+        echo "<http://$LINGHUB/datahub/$DATASET_NAME> <http://purl.org/dc/elements/1.1/source> \"DataHub\" . " | gzip >> ../datahub.nt.gz
 
     done
     cd ../../
@@ -64,7 +64,7 @@ lremap() {
     echo "Building RDF [1/2]"
     python lre-map.html.py
     echo "Converting to NT [2/2]"
-    rapper -o ntriples -I http://linghub.lider-project.eu/lremap/ lre-map.rdf 2>/dev/null | gzip >> ../linghub.nt.gz
+    rapper -o ntriples -I http://linghub.lider-project.eu/lremap/ lre-map.rdf 2>/dev/null | gzip >> lremap.nt.gz
     rm lre-map.rdf
     rm lre-map.html
     cd ..
@@ -92,9 +92,9 @@ clarin() {
         RES_NAME2=${f/%.xml/}
         RES_NAME=${RES_NAME2/#results\/cmdi\/}
         echo "Resource: $RES_NAME"
-        xsltproc clarin2dcat.xsl $f | rapper -o ntriples -I http://$LINGHUB/clarin/$RES_NAME - 2>/dev/null |  gzip >> ../linghub.nt.gz
-        echo "<http://$LINGHUB/clarin/$RES_NAME> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://catalog.clarin.eu/oai-harvester/others/results/cmdi/$RES_NAME.xml> ." | gzip >> ../linghub.nt.gz
-        echo "<http://$LINGHUB/clarin/$RES_NAME> <http://purl.org/dc/elements/1.1/source> \"CLARIN\" ." | gzip >> ../linghub.nt.gz
+        xsltproc clarin2dcat.xsl $f | rapper -o ntriples -I http://$LINGHUB/clarin/$RES_NAME - 2>/dev/null |  gzip >> clarin.nt.gz
+        echo "<http://$LINGHUB/clarin/$RES_NAME> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://catalog.clarin.eu/oai-harvester/others/results/cmdi/$RES_NAME.xml> ." | gzip >> clarin.nt.gz
+        echo "<http://$LINGHUB/clarin/$RES_NAME> <http://purl.org/dc/elements/1.1/source> \"CLARIN\" ." | gzip >> clarin.nt.gz
     done
     cd ..
 }
@@ -114,7 +114,7 @@ metashare() {
     echo "Running LIXR [2/2]"
     for f in META-SHARE_LRs/*.xml
     do
-        java -jar lixr-assembly-0.1.jar metashare $f | rapper -i turtle -o ntriples -I http://$LINGHUB/metashare/ - | gzip >> ../linghub.nt.gz
+        java -jar lixr-assembly-0.1.jar metashare $f | rapper -i turtle -o ntriples -I http://$LINGHUB/metashare/ - | gzip >> metashare.nt.gz
     done
 
     cd ..
@@ -127,6 +127,7 @@ case "$1" in
         lremap
         metashare
         clarin
+        compile
         ;;
     clean)
         clean
@@ -143,8 +144,11 @@ case "$1" in
     metashare)
         metashare
         ;;
+    compile)
+        compile
+        ;;
     *) 
-        echo "Please specify a stage (all|clean|datahub|clarin|lremap|metashare)"
+        echo "Please specify a stage (all|clean|datahub|clarin|lremap|metashare|compile)"
 esac
 
             
