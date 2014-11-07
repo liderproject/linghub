@@ -91,10 +91,15 @@ clarin() {
     do
         RES_NAME2=${f/%.xml/}
         RES_NAME=${RES_NAME2/#results\/cmdi\/}
-        echo "Resource: $RES_NAME"
-        xsltproc clarin2dcat.xsl $f | rapper -o ntriples -I http://$LINGHUB/clarin/$RES_NAME - 2>/dev/null |  gzip >> clarin.nt.gz
-        echo "<http://$LINGHUB/clarin/$RES_NAME> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://catalog.clarin.eu/oai-harvester/others/results/cmdi/$RES_NAME.xml> ." | gzip >> clarin.nt.gz
-        echo "<http://$LINGHUB/clarin/$RES_NAME> <http://purl.org/dc/elements/1.1/source> \"CLARIN\" ." | gzip >> clarin.nt.gz
+        if grep -q DcmiTerms $f
+        then
+            echo "Resource: $RES_NAME"
+            xsltproc clarin2dcat.xsl $f | rapper -o ntriples -I http://$LINGHUB/clarin/$RES_NAME - 2>/dev/null |  gzip >> clarin.nt.gz
+            echo "<http://$LINGHUB/clarin/$RES_NAME> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://catalog.clarin.eu/oai-harvester/others/results/cmdi/$RES_NAME.xml> ." | gzip >> clarin.nt.gz
+            echo "<http://$LINGHUB/clarin/$RES_NAME> <http://purl.org/dc/elements/1.1/source> \"CLARIN\" ." | gzip >> clarin.nt.gz
+        else
+            echo "Skipping: $RES_NAME"
+        fi
     done
     cd ..
 }

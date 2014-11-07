@@ -110,13 +110,6 @@
     <xsl:apply-templates select="cmd:DcmiTerms"></xsl:apply-templates>
     <xsl:for-each select="*">
       <xsl:choose>
-        <xsl:when test="contains(name(),':')">
-          <xsl:for-each select="node()">
-            <xsl:element name="{name(..)}">
-              <xsl:call-template name="components_o"></xsl:call-template>
-            </xsl:element>
-          </xsl:for-each>
-        </xsl:when>
         <xsl:when test="name()!='OLAC-DcmiTerms' and name()!='DcmiTerms'">
           <xsl:for-each select="node()">
             <xsl:element name="{concat('cmd:',name(..))}">
@@ -203,81 +196,5 @@
         <xsl:value-of select="cmd:type"></xsl:value-of>
       </dc:type>
     </xsl:if>
-  </xsl:template>
-  <xsl:template name="components_p">
-    <xsl:for-each select="node()">
-      <xsl:choose>
-        <xsl:when test="contains(name(),':')">
-          <xsl:for-each select="node()">
-            <xsl:element name="{name(..)}">
-              <xsl:call-template name="components_o"></xsl:call-template>
-            </xsl:element>
-          </xsl:for-each>
-        </xsl:when>
-        <xsl:when test="name()!=''">
-          <xsl:for-each select="node()">
-            <xsl:element name="{concat('cmd:',name(..))}">
-              <xsl:call-template name="components_o"></xsl:call-template>
-            </xsl:element>
-          </xsl:for-each>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:element name="{concat('cmd:',name(..))}">
-            <xsl:value-of select="."></xsl:value-of>
-          </xsl:element>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:for-each>
-    <xsl:for-each select="@*">
-      <xsl:choose>
-        <xsl:when test="contains(name(),':')">
-          <xsl:element name="{name()}">
-            <xsl:value-of select="."></xsl:value-of>
-          </xsl:element>
-        </xsl:when>
-        <xsl:when test="name()!='id'">
-          <xsl:element name="{concat('cmd:',name())}">
-            <xsl:value-of select="."></xsl:value-of>
-          </xsl:element>
-        </xsl:when>
-      </xsl:choose>
-    </xsl:for-each>
-  </xsl:template>
-  <xsl:template name="components_o">
-    <xsl:choose>
-      <xsl:when test="contains(name(),':')">
-        <xsl:element name="{name()}">
-          <xsl:attribute name="rdf:about">
-            <xsl:choose>
-              <xsl:when test="@id">
-                <xsl:value-of select="concat('#',@id)"></xsl:value-of>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="concat('#',generate-id())"></xsl:value-of>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:attribute>
-          <xsl:call-template name="components_p"></xsl:call-template>
-        </xsl:element>
-      </xsl:when>
-      <xsl:when test="name()!=''">
-        <xsl:element name="{concat('cmd:',name())}">
-          <xsl:attribute name="rdf:about">
-            <xsl:choose>
-              <xsl:when test="@id">
-                <xsl:value-of select="concat('#',@id)"></xsl:value-of>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="concat('#',generate-id())"></xsl:value-of>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:attribute>
-          <xsl:call-template name="components_p"></xsl:call-template>
-        </xsl:element>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="."></xsl:value-of>
-      </xsl:otherwise>
-    </xsl:choose>
   </xsl:template>
 </xsl:stylesheet>
