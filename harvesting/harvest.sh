@@ -14,7 +14,7 @@ clean() {
 }
 
 compile() {
-    cat datahub/datahub.nt.gz clarin/clarin.nt.gz lremap/lremap.nt.gz metashare/metashare.nt.gz > linghub.nt.gz
+    cat datahub.io/datahub.nt.gz clarin/clarin.nt.gz lre-map/lremap.nt.gz metashare/metashare.nt.gz > linghub.nt.gz
 }
 
 datahub() {

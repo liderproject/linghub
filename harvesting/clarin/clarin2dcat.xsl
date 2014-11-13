@@ -108,17 +108,6 @@
   <xsl:template match="cmd:Components">
     <xsl:apply-templates select="cmd:OLAC-DcmiTerms"></xsl:apply-templates>
     <xsl:apply-templates select="cmd:DcmiTerms"></xsl:apply-templates>
-    <xsl:for-each select="*">
-      <xsl:choose>
-        <xsl:when test="name()!='OLAC-DcmiTerms' and name()!='DcmiTerms'">
-          <xsl:for-each select="node()">
-            <xsl:element name="{concat('cmd:',name(..))}">
-              <xsl:call-template name="components_o"></xsl:call-template>
-            </xsl:element>
-          </xsl:for-each>
-        </xsl:when>
-      </xsl:choose>
-    </xsl:for-each>
   </xsl:template>
   <xsl:template match="cmd:OLAC-DcmiTerms|cmd:DcmiTerms">
     <xsl:if test="cmd:contributor!=''">

@@ -95,12 +95,6 @@ xsl:stylesheet(version="1.0"
     xsl:template(match="cmd:Components")
         xsl:apply-templates(select="cmd:OLAC-DcmiTerms")
         xsl:apply-templates(select="cmd:DcmiTerms")
-        xsl:for-each(select="*")
-            xsl:choose
-                xsl:when(test="name()!='OLAC-DcmiTerms' and name()!='DcmiTerms'")
-                    xsl:for-each(select="node()")
-                        xsl:element(name="{concat('cmd:',name(..))}")
-                            xsl:call-template(name="components_o")
 
     xsl:template(match="cmd:OLAC-DcmiTerms|cmd:DcmiTerms")
         xsl:if(test="cmd:contributor!=''")
