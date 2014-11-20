@@ -109,7 +109,7 @@ if __name__ == "__main__":
                     if re.match(url_regex, v):
                         url = escape(''.join(fix_url(v)))
                         out.write("""    <dcat:distribution>
-      <dcat:Distribution rdf:about='lre_%s#Distribution'>
+      <dcat:Distribution rdf:about='%s#Distribution'>
         <dcat:accessURL rdf:resource=\"%s\"/>
       </dcat:Distribution>
     </dcat:distribution>
