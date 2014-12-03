@@ -93,7 +93,7 @@ print "- blacklist: "+str(len(datasets))+" datasets"
 
 for dataset in datasets:
     print(dataset)
-    url = "http://datahub.io./dataset/%s" % dataset
+    url = "http://datahub.io/dataset/%s" % dataset
     rdf = fixCkan(rdfFromCkan(url), url)
     with open("data/%s.rdf" % dataset, "w") as out:
         rdf.serialize(out)

@@ -1,0 +1,4 @@
+[submodule "yuzu"]
+	path = yuzu
+	url = git@github.com:jmccrae/yuzu
+	branch = linghub

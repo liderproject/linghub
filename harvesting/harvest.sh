@@ -9,12 +9,12 @@ check() {
 }
 
 clean() {
-    rm -f linghub.nt.gz datahub/datahub.nt.gz clarin/clarin.nt.gz lremap/lremap.nt.gz metashare/metashare.nt.gz
+    rm -f linghub.nt.gz datahub.io/datahub.nt.gz lre-map/lremap.nt.gz metashare/metashare.nt.gz clarin/clarin.nt.gz 
     echo "Clean" 
 }
 
 compile() {
-    cat datahub.io/datahub.nt.gz clarin/clarin.nt.gz lre-map/lremap.nt.gz metashare/metashare.nt.gz > linghub.nt.gz
+    cat datahub.io/datahub.nt.gz lre-map/lremap.nt.gz metashare/metashare.nt.gz clarin/clarin.nt.gz > linghub.nt.gz
 }
 
 datahub() {
