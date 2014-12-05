@@ -39,6 +39,7 @@
 #
 #print r.text
 
+import sys
 import re
 from xml.sax.saxutils import escape
 from urllib import quote
@@ -123,6 +124,17 @@ if __name__ == "__main__":
     <dc:source>LRE Map</dc:source>
 """ % (data["ID"], escape(v)))
 
+                elif p == "Type" and v != "":
+                    if (v == "Mono" or v == "Bi" or v == "Tri" or v == "Multi"
+                            or v == "LI"):
+                        out.write(
+                            """    <lre:hasResourceLanguageType
+ rdf:resource="http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#""" +
+                            v + "\"/>\n")
+                    elif v == "Not Specified":
+                        pass
+                    else:
+                        sys.stderr.write("Bad value:" + v)
                 elif v != "":
                     out.write("    <lre:%s>%s</lre:%s>\n" % (p, escape(v), p))
             out.write("  </dcat:Dataset>\n")
