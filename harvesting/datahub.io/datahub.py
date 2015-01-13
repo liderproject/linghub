@@ -71,7 +71,6 @@ nodes = {}
 datasetJSON = ckanListDatasetsInGroup("owlg")
 datasets = [ds["name"] for ds in datasetJSON["result"]["packages"]]
 print "group 'owlg': "+str(len(datasets))+" datasets"
-datasets = []
 for group in ["mlode2012", "sfb673"]:
     newDatasetJSON = ckanListDatasetsInGroup(group)
     newDatasets = [ds["name"] for ds in newDatasetJSON["result"]["packages"]]
