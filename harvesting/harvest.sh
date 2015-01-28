@@ -14,7 +14,11 @@ clean() {
 }
 
 compile() {
-    cat datahub.io/datahub.nt.gz lre-map/lremap.nt.gz metashare/metashare.nt.gz clarin/clarin.nt.gz > linghub.nt.gz
+    rm -f linghub.nt.gz
+    for f in datahub.io/datahub.nt.gz lre-map/lremap.nt.gz metashare/metashare.nt.gz clarin/clarin.nt.gz 
+    do
+        zcat $f | python add_langs.py | gzip >> linghub.nt.gz
+    done
 }
 
 datahub() {
