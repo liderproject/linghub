@@ -2,3 +2,6 @@
 	path = yuzu
 	url = git@github.com:jmccrae/yuzu
 	branch = linghub
+[submodule "linghub-iso639-3"]
+	path = linghub-iso639-3
+	url = git@github.com:liderproject/linghub-iso639-3.git
