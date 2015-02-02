@@ -76,9 +76,9 @@
   </xsl:template>
   <xsl:template match="cmd:ResourceRef">
     <dcat:accessURL>
-      <xsl:attribute name="rdf:resource">
-        <xsl:value-of select="."></xsl:value-of>
-      </xsl:attribute>
+      <xsl:call-template name="uri">
+        <xsl:with-param name="u" select="."></xsl:with-param>
+      </xsl:call-template>
     </dcat:accessURL>
   </xsl:template>
   <xsl:template match="cmd:JournalFileProxyList">
@@ -100,9 +100,9 @@
   </xsl:template>
   <xsl:template match="cmd:IsPartOf">
     <cmd:IsPartOf>
-      <xsl:attribute name="rdf:resource">
-        <xsl:value-of select="."></xsl:value-of>
-      </xsl:attribute>
+      <xsl:call-template name="uri">
+        <xsl:with-param name="u" select="."></xsl:with-param>
+      </xsl:call-template>
     </cmd:IsPartOf>
   </xsl:template>
   <xsl:template match="cmd:Components">
@@ -185,5 +185,20 @@
         <xsl:value-of select="cmd:type"></xsl:value-of>
       </dc:type>
     </xsl:if>
+  </xsl:template>
+  <xsl:template name="uri">
+    <xsl:param name="u"></xsl:param>
+    <xsl:choose>
+      <xsl:when test="starts-with($u,'hdl:')">
+        <xsl:attribute name="rdf:resource">
+          <xsl:value-of select="concat('http://hdl.handle.net/', substring-after($u, 'hdl:'))"></xsl:value-of>
+        </xsl:attribute>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:attribute name="rdf:resource">
+          <xsl:value-of select="$u"></xsl:value-of>
+        </xsl:attribute>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 </xsl:stylesheet>

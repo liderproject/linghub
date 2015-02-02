@@ -71,8 +71,8 @@ xsl:stylesheet(version="1.0"
 
     xsl:template(match="cmd:ResourceRef")
         dcat:accessURL
-            xsl:attribute(name="rdf:resource")
-                xsl:value-of(select=".")
+            xsl:call-template(name="uri")
+                xsl:with-param(name="u",select=".")
 
     xsl:template(match="cmd:JournalFileProxyList")
         xsl:if(test="*")
@@ -89,8 +89,8 @@ xsl:stylesheet(version="1.0"
 
     xsl:template(match="cmd:IsPartOf")
         cmd:IsPartOf
-            xsl:attribute(name="rdf:resource")
-                xsl:value-of(select=".")
+            xsl:call-template(name="uri")
+                xsl:with-param(name="u",select=".")
 
     xsl:template(match="cmd:Components")
         xsl:apply-templates(select="cmd:OLAC-DcmiTerms")
@@ -142,3 +142,14 @@ xsl:stylesheet(version="1.0"
         xsl:if(test="cmd:type!=''")
             dc:type
                 xsl:value-of(select="cmd:type")
+
+    xsl:template(name="uri")
+        xsl:param(name="u")
+        xsl:choose
+            xsl:when(test="starts-with($u,'hdl:')")
+                xsl:attribute(name="rdf:resource")
+                    xsl:value-of(select="concat('http://hdl.handle.net/', substring-after($u, 'hdl:'))")
+            xsl:otherwise
+                xsl:attribute(name="rdf:resource")
+                    xsl:value-of(select="$u")
+
