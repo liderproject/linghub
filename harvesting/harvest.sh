@@ -15,7 +15,14 @@ clean() {
 
 compile() {
     rm -f linghub.nt.gz
-    for f in datahub.io/datahub.nt.gz lre-map/lremap.nt.gz metashare/metashare.nt.gz clarin/clarin.nt.gz 
+    if [ -e clarin/clarin.deduped.nt.gz ]
+    then
+        CLARIN_NT_GZ=clarin/clarin.deduped.nt.gz
+    else
+        CLARIN_NT_GZ=clarin/clarin.nt.gz
+    fi
+    echo $CLARIN_NT_GZ
+    for f in datahub.io/datahub.nt.gz lre-map/lremap.nt.gz metashare/metashare.nt.gz $CLARIN_NT_GZ 
     do
         zcat $f | python add_langs.py | gzip >> linghub.nt.gz
     done
