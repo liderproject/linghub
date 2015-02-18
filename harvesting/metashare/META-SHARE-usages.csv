@@ -1,0 +1,84 @@
+annotation,Annotation
+avatarSynthesis,Avatar Synthesis
+bilingualLexiconInduction,Bilingual Lexicon Induction
+contradictionDetection,Contradiction Detection
+coreferenceResolution,Coreference Resolution
+derivationalMorphologicalAnalysis,Derivational Morphological Analysis
+discourseAnalysis,Discourse Analysis
+documentClassification,Document Classification
+emotionGeneration,Emotion Generation
+emotionRecognition,Emotion Recognition
+entityMentionRecognition,Entity Mention Recognition
+eventExtraction,Event Extraction
+expressionRecognition,Expression Recognition
+faceRecognition,Face Recognition
+faceVerification,Face Verification
+humanoidAgentSynthesis,Humanoid Agent Synthesis
+informationExtraction,Information Extraction
+informationRetrieval,Information Retrieval
+intra-documentCoreferenceResolution,Intra-document Coreference Resolution
+knowledgeDiscovery,Knowledge Discovery
+knowledgeRepresentation,Knowledge Representation
+languageIdentification,Language Identification
+languageModelling,Language Modelling
+languageModelsTraining,Language Models Training
+lemmatization,Lemmatization
+lexiconAccess,Lexicon Access
+lexiconAcquisitionFromCorpora,Lexicon Acquisition From Corpora
+lexiconEnhancement,Lexicon Enhancement
+lexiconExtractionFromLexica,Lexicon Extraction From Lexica
+lexiconFormatConversion,Lexicon Format Conversion
+lexiconMerging,Lexicon Merging
+lexiconVisualization,Lexicon Visualization
+linguisticResearch,Linguistic Research
+lipTrackingAnalysis,Lip Tracking Analysis
+machineTranslation,Machine Translation
+morphologicalAnalysis,Morphological Analysis
+morphosyntacticTagging,Morphosyntactic Tagging
+multimediaDevelopment,Multimedia Development
+multimediaDocumentProcessing,Multimedia Document Processing
+namedEntityRecognition,Named Entity Recognition
+naturalLanguageGeneration,Natural Language Generation
+naturalLanguageUnderstanding,Natural Language Understanding
+opinionMining,Opinion Mining
+other,Other
+parsing,Parsing
+personIdentification,Person Identification
+personRecognition,Person Recognition
+persuasiveExpressionMining,Persuasive Expression Mining
+posTagging,Pos Tagging
+qualitativeAnalysis,Qualitative Analysis
+questionAnswering,Question Answering
+readingAndWritingAidApplications,Reading And Writing Aid Applications
+semanticRoleLabelling,Semantic Role Labelling
+semanticWeb,Semantic Web
+sentimentAnalysis,Sentiment Analysis
+signLanguageGeneration,Sign Language Generation
+signLanguageRecognition,Sign Language Recognition
+speakerIdentification,Speaker Identification
+speakerVerification,Speaker Verification
+speechAnalysis,Speech Analysis
+speechAssistedVideoControl,Speech Assisted Video Control
+speechLipsCorrelationAnalysis,Speech Lips Correlation Analysis
+speechRecognition,Speech Recognition
+speechSynthesis,Speech Synthesis
+speechToSpeechTranslation,Speech To Speech Translation
+speechUnderstanding,Speech Understanding
+speechVerification,Speech Verification
+spellChecking,Spell Checking
+spokenDialogueSystems,Spoken Dialogue Systems
+summarisation,Summarisation
+talkingHeadSynthesis,Talking Head Synthesis
+temporalExpressionRecognition,Temporal Expression Recognition
+terminologyExtraction,Terminology Extraction
+texToSpeechSynthesis,Text To Speech Synthesis
+textCategorisation,Text Categorisation
+textGeneration,Text Generation
+textMining,Text Mining
+textualEntailment,Textual Entailment
+topicDetection_Tracking,Topic Detection_Tracking
+userAuthentication,User Authentication
+visualSceneUnderstanding,Visual Scene Understanding
+voiceControl,Voice Control
+webServices,Web Services
+wordSenseDisambiguation,Word Sense Disambiguation

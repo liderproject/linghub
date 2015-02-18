@@ -68,14 +68,16 @@ lremap() {
     #python lre-map.new.py
     #Give up Riccardo's RDF dump is currently too FUBAR
 
+    ls -lh
     if [ ! -e lre-map.html ]
     then
-        zcat lre-map.html.gz > lre-map.html
+        # zcat lre-map.html.gz > lre-map.html # zcat on OS X always appends a .Z to the filename (better use gunzip -c)
+        gunzip -c lre-map.html.gz > lre-map.html
     fi
     echo "Building RDF [1/2]"
     python lre-map.html.py
     echo "Converting to NT [2/2]"
-    rapper -o ntriples -I http://linghub.lider-project.eu/lremap/ lre-map.rdf 2>/dev/null | gzip >> lremap.nt.gz
+    rapper -o ntriples -I http://linghub.lider-project.eu/lremap/ lre-map.rdf 2>/dev/null | python lre-map-add-usages.py | gzip >> lremap.nt.gz
     rm lre-map.rdf
     rm lre-map.html
     cd ..
