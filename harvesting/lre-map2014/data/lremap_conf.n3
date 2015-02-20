@@ -1,0 +1,129 @@
+<http://www.resourcebook.eu/lremap/owl/lremap_conf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.resourcebook.eu/lremap/owl/lremap_conf> <http://www.w3.org/2000/01/rdf-schema#label> "Modeled on http://data.semanticweb.org/ns/swc/ontology"^^<http://www.w3.org/2001/XMLSchemastring> .
+<http://data.semanticweb.org/ns/swc/ontology#CNL2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#CNL2014> <http://www.w3.org/2000/01/rdf-schema#label> "CNL 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#CNL2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#CNL2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#CNL2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#CNL2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#LREC2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#LREC2014> <http://www.w3.org/2000/01/rdf-schema#label> "LREC 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#LREC2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#ConferenceEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#LREC2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#LREC2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#OSACT2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#OSACT2014> <http://www.w3.org/2000/01/rdf-schema#label> "OSACT 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#OSACT2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#OSACT2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#OSACT2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#OSACT2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#LRE-Rel22014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#LRE-Rel22014> <http://www.w3.org/2000/01/rdf-schema#label> "LRE-Rel2 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#LRE-Rel22014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#LRE-Rel22014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#LRE-Rel22014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#LRE-Rel22014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#SaLTMiL2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#SaLTMiL2014> <http://www.w3.org/2000/01/rdf-schema#label> "SaLTMiL 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#SaLTMiL2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#SaLTMiL2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#SaLTMiL2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#SaLTMiL2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#SignLanguage2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#SignLanguage2014> <http://www.w3.org/2000/01/rdf-schema#label> "SignLanguage 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#SignLanguage2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#SignLanguage2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#SignLanguage2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#SignLanguage2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#MTE2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#MTE2014> <http://www.w3.org/2000/01/rdf-schema#label> "MTE 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#MTE2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#MTE2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#MTE2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#MTE2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#LRT4HDA2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#LRT4HDA2014> <http://www.w3.org/2000/01/rdf-schema#label> "LRT4HDA 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#LRT4HDA2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#LRT4HDA2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#LRT4HDA2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#LRT4HDA2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#MMC2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#MMC2014> <http://www.w3.org/2000/01/rdf-schema#label> "MMC 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#MMC2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#MMC2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#MMC2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#MMC2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#OpeNER2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#OpeNER2014> <http://www.w3.org/2000/01/rdf-schema#label> "OpeNER 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#OpeNER2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#OpeNER2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#OpeNER2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#OpeNER2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#BioTxtM2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#BioTxtM2014> <http://www.w3.org/2000/01/rdf-schema#label> "BioTxtM 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#BioTxtM2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#BioTxtM2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#BioTxtM2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#BioTxtM2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#LDL2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#LDL2014> <http://www.w3.org/2000/01/rdf-schema#label> "LDL 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#LDL2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#LDL2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#LDL2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#LDL2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#ES3LOD2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#ES3LOD2014> <http://www.w3.org/2000/01/rdf-schema#label> "ES3LOD 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#ES3LOD2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#ES3LOD2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#ES3LOD2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#ES3LOD2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#DIMPLE2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#DIMPLE2014> <http://www.w3.org/2000/01/rdf-schema#label> "DIMPLE 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#DIMPLE2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#DIMPLE2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#DIMPLE2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#DIMPLE2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#WILDRE2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#WILDRE2014> <http://www.w3.org/2000/01/rdf-schema#label> "WILDRE 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#WILDRE2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#WILDRE2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#WILDRE2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#WILDRE2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#CCURL2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#CCURL2014> <http://www.w3.org/2000/01/rdf-schema#label> "CCURL 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#CCURL2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#CCURL2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#CCURL2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#CCURL2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#VisLR2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#VisLR2014> <http://www.w3.org/2000/01/rdf-schema#label> "VisLR 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#VisLR2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#VisLR2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#VisLR2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#VisLR2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#isa-102014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#isa-102014> <http://www.w3.org/2000/01/rdf-schema#label> "isa-10 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#isa-102014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#isa-102014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#isa-102014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#isa-102014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#BUCC20142014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#BUCC20142014> <http://www.w3.org/2000/01/rdf-schema#label> "BUCC2014 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#BUCC20142014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#BUCC20142014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#BUCC20142014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#BUCC20142014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#SPLET2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#SPLET2014> <http://www.w3.org/2000/01/rdf-schema#label> "SPLET 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#SPLET2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#SPLET2014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#SPLET2014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#SPLET2014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#CMLC-22014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#CMLC-22014> <http://www.w3.org/2000/01/rdf-schema#label> "CMLC-2 2014" .
+<http://data.semanticweb.org/ns/swc/ontology#CMLC-22014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.semanticweb.org/ns/swc/ontology#WorkshopEvent> .
+<http://data.semanticweb.org/ns/swc/ontology#CMLC-22014> <http://purl.org/NET/c4dm/timeline.owl#atYear> "2014"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://data.semanticweb.org/ns/swc/ontology#CMLC-22014> <http://data.semanticweb.org/ns/swc/ontology#hasLocation> <http://data.semanticweb.org/ns/swc/ontology#Reykjavik> .
+<http://data.semanticweb.org/ns/swc/ontology#CMLC-22014> <http://data.semanticweb.org/ns/swc/ontology#isSubEventOf> <http://data.semanticweb.org/ns/swc/ontology#LREC2014> .
+<http://data.semanticweb.org/ns/swc/ontology#Reykjavik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://data.semanticweb.org/ns/swc/ontology#Reykjavik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
