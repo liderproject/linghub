@@ -128,10 +128,45 @@ def main():
             
     tmpFile.close()
 
+
+
  # Replaces LREmap prefix with linghub   
     with open('tmp.nt', 'r') as TempFile:
         for line in TempFile:
-           outFile.write(line.replace('http://www.resourcebook.eu/lremap/owl/lremap_ri/','http://linghub.lider-project.eu/lremap/')) 
+           # I added some more data transformation here
+           elems = line.replace('http://www.resourcebook.eu/lremap/owl/lremap_ri/','http://linghub.lider-project.eu/lremap/').split(" ")
+
+           elems[0] = elems[0].replace("http://data.semanticweb.org/ns/swc/ontology#", "http://linghub.lider-project.eu/lremap/conference/")
+           elems[2] = elems[2].replace("http://data.semanticweb.org/ns/swc/ontology#", "http://linghub.lider-project.eu/lremap/conference/")
+
+           #if (elems[1] == "<http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#hasResourceAvailability>" or
+           if (elems[1] == "<http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#hasResourceStatus>" or 
+               elems[1] == "<http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#hasResourceModality>" or
+               elems[1] == "<http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#hasResourceUse>"):
+                outFile.write("%s %s \"%s\"@en .\n" % (elems[0], elems[1], elems[2][59:-1].replace("_", " ")))
+           elif elems[1] == "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>":
+                if elems[2] == "<http://www.w3.org/2002/07/owl#NamedIndividual>":
+                    pass
+                elif elems[2] == "<http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#ResourceName>":
+                    pass
+                elif elems[2] == "<http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#ResourceType>":
+                    pass
+                elif elems[2] == "<http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#ResourceAvailability>":
+                    pass
+                elif elems[2] == "<http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#ResourceModality>":
+                    pass
+                elif elems[2] == "<http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#ResourceStatus>":
+                    pass
+                elif elems[2] == "<http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#ResourceUse>":
+                    pass
+                elif elems[2].startswith("<http://www.resourcebook.eu/lremap/owl/lremap_resource.owl#"):
+                    outFile.write("%s %s <http://www.w3.org/ns/dcat#Dataset> .\n" % (elems[0], elems[1]))
+                    outFile.write("%s <http://purl.org/dc/terms/type> %s .\n " % (elems[0], elems[2]))
+                else:
+                    outFile.write(" ".join(elems))
+           else:
+              outFile.write(" ".join(elems))
+
 
     outFile.close()
     os.remove('tmp.nt')  

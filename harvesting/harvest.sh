@@ -81,6 +81,10 @@ lremap() {
     rm lre-map.rdf
     rm lre-map.html
     cd ..
+    cd lre-map2014
+    python LRE-Map2014Harvester.py
+    cat LREmap2014.nt | gzip >> ../lre-map/lremap.nt.gz
+    cd ..
 }
 
 clarin() {
