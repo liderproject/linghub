@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:cmd="http://www.clarin.eu/cmd/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:ann="http://www.clarin.eu" targetNamespace="http://www.clarin.eu/cmd/" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo>
+      <ann:Header>
+        <ann:ID>clarin.eu:cr1:p_1328259700954</ann:ID>
+        <ann:Name>Song</ann:Name>
+        <ann:Description>CMDI profile for Song</ann:Description>
+      </ann:Header>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+  <xs:simpleType name="simpletype-ByteOrder-clarin.eu.cr1.c_1271859438143">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="big endian" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2687_a2b83d99-1795-80ee-9968-cb34dbd0d959"/>
+      <xs:enumeration value="little endian" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2688_592a09a1-3e6c-3880-c828-d218fee72af5"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="simpletype-Compression-clarin.eu.cr1.c_1271859438143">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2964_6226b156-c9cf-07db-f5e8-00accb1aafd9"/>
+      <xs:enumeration value="lossless" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2962_545d0b08-7224-067c-488a-d58ca4b6e5ef"/>
+      <xs:enumeration value="lossy" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2963_56ea0ae5-d807-6a0c-088d-ae596c28e30f"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="simpletype-SpeechCoding-clarin.eu.cr1.c_1271859438143">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pcm" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5511_72024d49-98cd-c8c8-4230-3e9a9be7a03e" ann:label=""/>
+      <xs:enumeration value="alaw" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5509_49d08a21-ac57-b4a0-b951-9e973f2048ff" ann:label=""/>
+      <xs:enumeration value="mlaw" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5510_bbf82aa8-440f-f9aa-414d-cf0327bd06bb" ann:label=""/>
+      <xs:enumeration value="signed integer" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5512_85d9121b-8109-2a32-4300-601190455645" ann:label=""/>
+      <xs:enumeration value="unsigned integer" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5513_1137e774-26b5-2a51-9972-212bd7f21a1f" ann:label=""/>
+      <xs:enumeration value="other" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2599_93805699-d3a2-ae19-5399-d0bba0e8fc24" ann:label=""/>
+      <xs:enumeration value="unknown" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2591_f769d93b-c007-d2c9-aff2-99e9177e5764" ann:label=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="simpletype-MimeType-clarin.eu.cr1.c_1271859438106">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="application/json"/>
+      <xs:enumeration value="application/msword"/>
+      <xs:enumeration value="application/pdf"/>
+      <xs:enumeration value="application/vnd.ms-excel"/>
+      <xs:enumeration value="application/vnd.ms-powerpoint"/>
+      <xs:enumeration value="application/vnd.oasis.opendocument.graphics"/>
+      <xs:enumeration value="application/vnd.oasis.opendocument.presentation"/>
+      <xs:enumeration value="application/vnd.oasis.opendocument.spreadsheet"/>
+      <xs:enumeration value="application/vnd.oasis.opendocument.text"/>
+      <xs:enumeration value="application/x-tar"/>
+      <xs:enumeration value="application/x-tex"/>
+      <xs:enumeration value="application/x-texinfo"/>
+      <xs:enumeration value="application/x-zip-compressed"/>
+      <xs:enumeration value="application/xhtml+xml"/>
+      <xs:enumeration value="application/zip"/>
+      <xs:enumeration value="audio/aiff"/>
+      <xs:enumeration value="audio/basic"/>
+      <xs:enumeration value="audio/midi"/>
+      <xs:enumeration value="audio/mod"/>
+      <xs:enumeration value="audio/mp4"/>
+      <xs:enumeration value="audio/mpeg3"/>
+      <xs:enumeration value="audio/mpeg"/>
+      <xs:enumeration value="audio/ogg"/>
+      <xs:enumeration value="audio/raw"/>
+      <xs:enumeration value="audio/vnd.wave"/>
+      <xs:enumeration value="audio/voc"/>
+      <xs:enumeration value="audio/vorbis"/>
+      <xs:enumeration value="audio/wav"/>
+      <xs:enumeration value="audio/webm"/>
+      <xs:enumeration value="audio/x-adpcm"/>
+      <xs:enumeration value="audio/x-aiff"/>
+      <xs:enumeration value="audio/x-au"/>
+      <xs:enumeration value="audio/x-esps"/>
+      <xs:enumeration value="audio/x-gsm"/>
+      <xs:enumeration value="audio/x-mpeg-3"/>
+      <xs:enumeration value="audio/x-mpeg"/>
+      <xs:enumeration value="audio/x-nist"/>
+      <xs:enumeration value="audio/x-realaudio"/>
+      <xs:enumeration value="audio/x-ssff"/>
+      <xs:enumeration value="audio/x-voc"/>
+      <xs:enumeration value="audio/x-wav"/>
+      <xs:enumeration value="image/bmp"/>
+      <xs:enumeration value="image/gif"/>
+      <xs:enumeration value="image/jpeg"/>
+      <xs:enumeration value="image/pjpeg"/>
+      <xs:enumeration value="image/png"/>
+      <xs:enumeration value="image/svg+xml"/>
+      <xs:enumeration value="image/tiff"/>
+      <xs:enumeration value="image/vasa"/>
+      <xs:enumeration value="image/x-quicktime"/>
+      <xs:enumeration value="multipart/x-gzip"/>
+      <xs:enumeration value="multipart/x-zip"/>
+      <xs:enumeration value="text/css"/>
+      <xs:enumeration value="text/csv"/>
+      <xs:enumeration value="text/html"/>
+      <xs:enumeration value="text/plain"/>
+      <xs:enumeration value="text/plain-bas"/>
+      <xs:enumeration value="text/praat-textgrid"/>
+      <xs:enumeration value="text/richtext"/>
+      <xs:enumeration value="text/sgml"/>
+      <xs:enumeration value="text/xml"/>
+      <xs:enumeration value="video/avi"/>
+      <xs:enumeration value="video/mp4"/>
+      <xs:enumeration value="video/mpeg"/>
+      <xs:enumeration value="video/msvideo"/>
+      <xs:enumeration value="video/ogg"/>
+      <xs:enumeration value="video/quicktime"/>
+      <xs:enumeration value="video/webm"/>
+      <xs:enumeration value="video/x-motion-jpeg"/>
+      <xs:enumeration value="video/x-ms-wmv"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Resourcetype_simple">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Metadata">
+        <xs:annotation>
+          <xs:documentation>The ResourceProxy refers to another component metadata
+                            instance (e.g. for grouping metadata descriptions into
+                            collections)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Resource">
+        <xs:annotation>
+          <xs:documentation>The ResourceProxy refers to a file that is not a metadata
+                            instance (e.g. a text document)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SearchService">
+        <xs:annotation>
+          <xs:documentation>The ResourceProxy refers to a (SRU/CQL) web service that can be used to query the resource described in this file</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SearchPage">
+        <xs:annotation>
+          <xs:documentation>The ResourceProxy refers to a web page that can be used to query the resource described in this file</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LandingPage">
+        <xs:annotation>
+          <xs:documentation>The ResourceProxy refers to a web page that contains the "original context" of the resource described in this file (e.g. repository web page displaying the metadata).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="complextype-ByteOrder-clarin.eu.cr1.c_1271859438143">
+    <xs:simpleContent>
+      <xs:extension base="cmd:simpletype-ByteOrder-clarin.eu.cr1.c_1271859438143"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="complextype-Compression-clarin.eu.cr1.c_1271859438143">
+    <xs:simpleContent>
+      <xs:extension base="cmd:simpletype-Compression-clarin.eu.cr1.c_1271859438143"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="complextype-SpeechCoding-clarin.eu.cr1.c_1271859438143">
+    <xs:simpleContent>
+      <xs:extension base="cmd:simpletype-SpeechCoding-clarin.eu.cr1.c_1271859438143"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="complextype-MimeType-clarin.eu.cr1.c_1271859438106">
+    <xs:simpleContent>
+      <xs:extension base="cmd:simpletype-MimeType-clarin.eu.cr1.c_1271859438106"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="CMD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Header">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MdCreator" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:anyAttribute namespace="##other" processContents="lax"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MdCreationDate" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:date">
+                      <xs:anyAttribute namespace="##other" processContents="lax"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MdSelfLink" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:anyURI">
+                      <xs:anyAttribute namespace="##other" processContents="lax"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MdProfile" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:anyURI">
+                      <xs:anyAttribute namespace="##other" processContents="lax"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="MdCollectionDisplayName" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:anyAttribute namespace="##other" processContents="lax"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Resources">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ResourceProxyList">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="ResourceProxy">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="1" minOccurs="1" name="ResourceType">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="cmd:Resourcetype_simple">
+                                  <xs:attribute name="mimetype" type="xs:string"/>
+                                  <xs:anyAttribute namespace="##other" processContents="lax"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element maxOccurs="1" minOccurs="1" name="ResourceRef">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:anyURI">
+                                  <xs:anyAttribute namespace="##other" processContents="lax"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                        <xs:anyAttribute namespace="##other" processContents="lax"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:anyAttribute namespace="##other" processContents="lax"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="JournalFileProxyList">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="JournalFileProxy">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="1" minOccurs="1" name="JournalFileRef">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:anyURI">
+                                  <xs:anyAttribute namespace="##other" processContents="lax"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:anyAttribute namespace="##other" processContents="lax"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:anyAttribute namespace="##other" processContents="lax"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ResourceRelationList">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="ResourceRelation">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="1" minOccurs="1" name="RelationType">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:anyAttribute namespace="##other" processContents="lax"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element maxOccurs="1" minOccurs="1" name="Res1">
+                            <xs:complexType>
+                              <xs:attribute name="ref" type="xs:IDREF"/>
+                              <xs:anyAttribute namespace="##other" processContents="lax"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element maxOccurs="1" minOccurs="1" name="Res2">
+                            <xs:complexType>
+                              <xs:attribute name="ref" type="xs:IDREF"/>
+                              <xs:anyAttribute namespace="##other" processContents="lax"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:anyAttribute namespace="##other" processContents="lax"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:anyAttribute namespace="##other" processContents="lax"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IsPartOfList">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="IsPartOf">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:anyURI">
+                            <xs:anyAttribute namespace="##other" processContents="lax"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:anyAttribute namespace="##other" processContents="lax"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Components">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Song" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Summary" dcr:datcat="http://hdl.handle.net/11459/CCR_C-152_531635f8-9697-3dbb-4463-ff72ca1ac5b4" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string"/>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Musicnotation" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5123_c59fad9e-85ea-f3f1-06d6-f20bf9608b34" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string"/>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Polyphony" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5124_d8ee7cec-fc12-5589-e4a0-b22a74cda196" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string"/>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Audio" dcr:datcat="http://hdl.handle.net/11459/CCR_C-1845_97d455c9-2f4a-0f47-4d4a-ff60c2db2582" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string"/>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Text" dcr:datcat="http://hdl.handle.net/11459/CCR_C-1845_97d455c9-2f4a-0f47-4d4a-ff60c2db2582" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string"/>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Songtitle" minOccurs="0" maxOccurs="1" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5125_4259bcdc-74e3-0d71-ef4b-39cc70e4e779">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Original" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5127_f2721b23-921c-46ba-8d4d-88b46aef6976" minOccurs="1" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Normalised" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5126_149258f8-77ab-f868-7b69-89aaf62c5b12" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Incipit" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Original" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5129_3243b897-d5b0-f5b0-a446-2e5de627b1e4" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Normalised" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5130_ea7bb8be-cb01-383d-fd94-0d72168411d2" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Chorus" minOccurs="0" maxOccurs="1" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5131_d00bbcd5-16a6-9341-eb3f-f6836d5bc0ed">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Original" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5132_2f546c04-fa34-92e2-b3f2-6ab177e3c2a9" minOccurs="1" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Normalised" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5133_c650c497-73b3-2864-3cd4-37e7c3df5094" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Genres" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Genre" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2470_d191f2b2-6339-f031-b534-70d526b28357" minOccurs="0" maxOccurs="unbounded" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Keywords" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Keyword" dcr:datcat="http://hdl.handle.net/11459/CCR_C-278_336dd81a-626b-713e-c74a-34fa2ca26a71" minOccurs="0" maxOccurs="unbounded" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Melody" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="TuneIndication" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Tune" minOccurs="0" maxOccurs="unbounded" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5134_e66f1327-ac29-1e0f-f6e5-7503828305bb">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Original" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5135_1be87b5b-bdb1-baf1-1ef8-23afbe337eb6" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string"/>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Normalised" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5136_a10b79ab-0fa0-aaff-d8bf-e0c30c5f603c" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string"/>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="StandardName" dcr:datcat="http://hdl.handle.net/11459/CCR_C-1845_97d455c9-2f4a-0f47-4d4a-ff60c2db2582" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string"/>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="ref" type="xs:IDREFS"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="ref" type="xs:IDREFS"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Stanza" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="NumberOfStanzas" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5137_3b08144f-ab58-0777-08e6-db0ba8e84a0d" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="StanzaForm" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="RhymeScheme" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5138_f13da5b3-d1c8-bd38-334c-973feb449d5a" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string"/>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Accents" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5139_4e28be9c-1cd9-986f-d2c2-2a55b3cab31a" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string"/>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="RhymeGender" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5140_f7043ff7-6d65-b27c-985d-da625848b9f0" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string"/>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="NumberOfVerses" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5141_28ae7d6f-27bb-fe96-894b-5427c85a4042" type="xs:string" minOccurs="0" maxOccurs="1" ann:displaypriority="1"/>
+                              </xs:sequence>
+                              <xs:attribute name="ref" type="xs:IDREFS"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Authors" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Author" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Role" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string"/>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Initials" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string"/>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Name" minOccurs="1" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Original" minOccurs="1" maxOccurs="1" ann:displaypriority="1">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string"/>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Normalised" minOccurs="0" maxOccurs="1">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string"/>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="ref" type="xs:IDREFS"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="ref" type="xs:IDREFS"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                        <xs:attribute name="ComponentId" type="xs:anyURI" fixed="clarin.eu:cr1:c_1328259700958"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="LocationInSource" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Pagenumber" dcr:datcat="http://hdl.handle.net/11459/CCR_C-4126_cdb1ec9c-e388-ca44-203d-9a2d0948ad71" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Songnumber" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5142_232d4537-4437-1b8a-65a3-9a29cb5f0a79" type="xs:float" minOccurs="0" maxOccurs="1" ann:displaypriority="1"/>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Source" minOccurs="0" maxOccurs="1" dcr:datcat="http://hdl.handle.net/11459/CCR_C-471_46df838b-1f13-95e4-4ada-a77afd3d6333">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CopyUsed" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5252_6f551cfd-a472-a13a-8320-534413cdab9d" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Year" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5253_3ab4ec91-be6b-5cba-6882-7346d7053ed8" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Century" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5254_278735a8-d13a-1743-afea-04a3b95003bc" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Title" minOccurs="0" maxOccurs="1" dcr:datcat="http://hdl.handle.net/11459/CCR_C-4114_747bf046-1208-940d-36ba-297e4de49e0c">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Original" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5127_f2721b23-921c-46ba-8d4d-88b46aef6976" minOccurs="0" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string"/>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Normalised" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5126_149258f8-77ab-f868-7b69-89aaf62c5b12" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string"/>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="ref" type="xs:IDREFS"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Authors" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Author" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Role" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string"/>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Initials" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string"/>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Name" minOccurs="1" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Original" minOccurs="1" maxOccurs="1" ann:displaypriority="1">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string"/>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Normalised" minOccurs="0" maxOccurs="1">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string"/>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="ref" type="xs:IDREFS"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="ref" type="xs:IDREFS"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="ref" type="xs:IDREFS"/>
+                              <xs:attribute name="ComponentId" type="xs:anyURI" fixed="clarin.eu:cr1:c_1328259700958"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Recording" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Singer" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5255_c793e955-c6d7-b4be-39b0-2f434499edf1" minOccurs="0" maxOccurs="unbounded" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Recorder" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5256_50042218-a48c-2039-c248-1de55ce9b361" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Date" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5257_6572a4ea-cc70-c721-bbd8-2f6c28cc71a1" type="xs:date" minOccurs="0" maxOccurs="1" ann:displaypriority="1"/>
+                          <xs:element name="Location" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Place" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2696_d3b0e503-d971-8849-5c6f-128cf2f56fb4" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string"/>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Kloekecode" dcr:datcat="http://hdl.handle.net/11459/CCR_C-3651_11af5459-cb73-56a9-d506-21f996fe5dda" minOccurs="0" maxOccurs="1" ann:displaypriority="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string"/>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="ref" type="xs:IDREFS"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Language" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="LanguageName" maxOccurs="unbounded" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2484_669684e7-cb9e-ea96-59cb-a25fe89b9b9d" minOccurs="0" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute ref="xml:lang"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="ISO639-3" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2482_08eded24-4086-7e3f-88e5-e0807fb01e17" minOccurs="0" maxOccurs="1" ann:documentation="The list of ISO-639-3 language families. Based on:        http://www.sil.org/iso639-3">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Comment" dcr:datcat="http://hdl.handle.net/11459/CCR_C-1846_f7e57b9b-1775-81d2-fea9-8189d594d716" minOccurs="0" maxOccurs="1" ann:documentation="Remark about the language used" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                        <xs:attribute name="ComponentId" type="xs:anyURI" fixed="clarin.eu:cr1:c_1337778925010"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="TechnicalMetadata" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="MimeType" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2571_2be2e583-e5af-34c2-3673-93359ec1f7df" minOccurs="1" maxOccurs="1" ann:displaypriority="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Quality" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2574_85e2b550-e877-599a-fb82-76812896f9da" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string"/>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Size" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="TotalSize" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Number" type="xs:decimal" minOccurs="1" maxOccurs="1" ann:displaypriority="1"/>
+                                      <xs:element name="SizeUnit" minOccurs="1" maxOccurs="1">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string"/>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="ref" type="xs:IDREFS"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Dimension" minOccurs="0" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Width" minOccurs="0" maxOccurs="1">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Number" type="xs:decimal" minOccurs="1" maxOccurs="1" ann:displaypriority="1"/>
+                                            <xs:element name="SizeUnit" minOccurs="1" maxOccurs="1" ann:displaypriority="1">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string"/>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="ref" type="xs:IDREFS"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Height" minOccurs="0" maxOccurs="1">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Number" type="xs:decimal" minOccurs="1" maxOccurs="1" ann:displaypriority="1"/>
+                                            <xs:element name="SizeUnit" minOccurs="1" maxOccurs="1" ann:displaypriority="1">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string"/>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="ref" type="xs:IDREFS"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="ref" type="xs:IDREFS"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="ref" type="xs:IDREFS"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="SpeechTechnicalMetadata" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="SamplingFrequency" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2577_73344cc2-f341-8842-bcf7-48e5267a3aca" type="xs:decimal" minOccurs="0" maxOccurs="unbounded"/>
+                                <xs:element name="NumberOfChannels" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2961_9c4165d7-a124-bd97-ba64-73763421aa9d" type="xs:decimal" minOccurs="0" maxOccurs="unbounded"/>
+                                <xs:element name="ByteOrder" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2686_8482ada6-574c-67e3-d65a-64a23b06b533" minOccurs="0" maxOccurs="unbounded" type="cmd:complextype-ByteOrder-clarin.eu.cr1.c_1271859438143"/>
+                                <xs:element name="Compression" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2685_65492121-3759-0fc2-694b-83eccbb9d26c" minOccurs="0" maxOccurs="unbounded" type="cmd:complextype-Compression-clarin.eu.cr1.c_1271859438143"/>
+                                <xs:element name="BitResolution" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2684_ac8bdf07-61be-d478-53f7-8949139e11fc" type="xs:decimal" minOccurs="0" maxOccurs="unbounded"/>
+                                <xs:element name="SpeechCoding" dcr:datcat="http://hdl.handle.net/11459/CCR_C-5514_145df064-6ac4-f0d3-7de8-1002dfb9b45e" minOccurs="0" maxOccurs="unbounded" type="cmd:complextype-SpeechCoding-clarin.eu.cr1.c_1271859438143"/>
+                                <xs:element name="MimeType" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="MimeType" dcr:datcat="http://hdl.handle.net/11459/CCR_C-2571_2be2e583-e5af-34c2-3673-93359ec1f7df" minOccurs="1" maxOccurs="unbounded" type="cmd:complextype-MimeType-clarin.eu.cr1.c_1271859438106"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="ref" type="xs:IDREFS"/>
+                                    <xs:attribute name="ComponentId" type="xs:anyURI" fixed="clarin.eu:cr1:c_1271859438106"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="ref" type="xs:IDREFS"/>
+                              <xs:attribute name="ComponentId" type="xs:anyURI" fixed="clarin.eu:cr1:c_1271859438143"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:IDREFS"/>
+                        <xs:attribute name="ComponentId" type="xs:anyURI" fixed="clarin.eu:cr1:c_1307535113337"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="ref" type="xs:IDREFS"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="CMDVersion" fixed="1.1" use="required"/>
+      <xs:anyAttribute namespace="##other" processContents="lax"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

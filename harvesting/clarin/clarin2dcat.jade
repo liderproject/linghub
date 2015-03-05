@@ -97,51 +97,171 @@ xsl:stylesheet(version="1.0"
         xsl:apply-templates(select="cmd:DcmiTerms")
 
     xsl:template(match="cmd:OLAC-DcmiTerms|cmd:DcmiTerms")
+        xsl:if(test="cmd:abstract!=''")
+            dct:abstract
+                xsl:value-of(select="cmd:abstract")
+        xsl:if(test="cmd:accessRights!=''")
+            dct:accessRights
+                xsl:value-of(select="cmd:accessRights")
+        xsl:if(test="cmd:accrualMethod!=''")
+            dct:accrualMethod
+                xsl:value-of(select="cmd:accrualMethod")
+        xsl:if(test="cmd:accrualPeriodicity!=''")
+            dct:accrualPeriodicity
+                xsl:value-of(select="cmd:accrualPeriodicity")
+        xsl:if(test="cmd:accrualPolicy!=''")
+            dct:accrualPolicy
+                xsl:value-of(select="cmd:accrualPolicy")
+        xsl:if(test="cmd:alternative!=''")
+            dct:alternative
+                xsl:value-of(select="cmd:alternative")
+        xsl:if(test="cmd:audience!=''")
+            dct:audience
+                xsl:value-of(select="cmd:audience")
+        xsl:if(test="cmd:available!=''")
+            dct:available
+                xsl:value-of(select="cmd:available")
+        xsl:if(test="cmd:bibliographicCitation!=''")
+            dct:bibliographicCitation
+                xsl:value-of(select="cmd:bibliographicCitation")
+        xsl:if(test="cmd:conformsTo!=''")
+            dct:conformsTo
+                xsl:value-of(select="cmd:conformsTo")
         xsl:if(test="cmd:contributor!=''")
             dc:contributor
                 xsl:value-of(select="cmd:contributor")
         xsl:if(test="cmd:coverage!=''")
             dc:coverage
                 xsl:value-of(select="cmd:coverage")
+        xsl:if(test="cmd:!='created'")
+            dct:created
+                xsl:value-of(select="cmd:created")
         xsl:if(test="cmd:creator!=''")
             dc:creator
                 xsl:value-of(select="cmd:creator")
         xsl:if(test="cmd:date!=''")
             dc:date
                 xsl:value-of(select="cmd:date")
+        xsl:if(test="cmd:dateAccepted!=''")
+            dct:dateAccepted
+                xsl:value-of(select="cmd:dateAccepted")
+        xsl:if(test="cmd:dateSubmitted!=''")
+            dct:dateSubmitted
+                xsl:value-of(select="cmd:dateSubmitted")
         xsl:if(test="cmd:description!=''")
             dc:description
                 xsl:value-of(select="cmd:description")
+        xsl:if(test="cmd:educationLevel!=''")
+            dct:educationLevel
+                xsl:value-of(select="cmd:educationLevel")
+        xsl:if(test="cmd:extent!=''")
+            dct:extent
+                xsl:value-of(select="cmd:extent")
         xsl:if(test="cmd:format!=''")
             dc:format
                 xsl:value-of(select="cmd:format")
+        xsl:if(test="cmd:hasFormat!=''")
+            dct:hasFormat
+                xsl:value-of(select="cmd:hasFormat")
+        xsl:if(test="cmd:hasPart!=''")
+            dct:hasPart
+                xsl:value-of(select="cmd:hasPart")
+        xsl:if(test="cmd:hasVersion!=''")
+            dct:hasVersion
+                xsl:value-of(select="cmd:hasVersion")
         xsl:if(test="cmd:relation!=''")
             dc:relation
                 xsl:value-of(select="cmd:relation")
         xsl:if(test="cmd:identifier!=''")
             dc:identifier
                 xsl:value-of(select="cmd:identifier")
+        xsl:if(test="cmd:instructionalMethod!=''")
+            dct:instructionalMethod
+                xsl:value-of(select="cmd:instructionalMethod")
+        xsl:if(test="cmd:isFormatOf!=''")
+            dct:isFormatOf
+                xsl:value-of(select="cmd:isFormatOf")
+        xsl:if(test="cmd:isPartOf!=''")
+            dct:isPartOf
+                xsl:value-of(select="cmd:isPartOf")
+        xsl:if(test="cmd:isReferencedBy!=''")
+            dct:isReferencedBy
+                xsl:value-of(select="cmd:isReferencedBy")
+        xsl:if(test="cmd:isReplacedBy!=''")
+            dct:isReplacedBy
+                xsl:value-of(select="cmd:isReplacedBy")
+        xsl:if(test="cmd:isRequiredBy!=''")
+            dct:isRequiredBy
+                xsl:value-of(select="cmd:isRequiredBy")
+        xsl:if(test="cmd:issued!=''")
+            dct:issued
+                xsl:value-of(select="cmd:issued")
+        xsl:if(test="cmd:isVersionOf!=''")
+            dct:isVersionOf
+                xsl:value-of(select="cmd:isVersionOf")
         xsl:if(test="cmd:language!=''")
             dc:language
                 xsl:value-of(select="cmd:language")
+        xsl:if(test="cmd:license!=''")
+            dct:license
+                xsl:value-of(select="cmd:license")
+        xsl:if(test="cmd:mediator!=''")
+            dct:mediator
+                xsl:value-of(select="cmd:mediator")
+        xsl:if(test="cmd:medium!=''")
+            dct:medium
+                xsl:value-of(select="cmd:medium")
+        xsl:if(test="cmd:modified!=''")
+            dct:modified
+                xsl:value-of(select="cmd:modified")
+        xsl:if(test="cmd:provenance!=''")
+            dct:provenance
+                xsl:value-of(select="cmd:provenance")
         xsl:if(test="cmd:publisher!=''")
             dc:publisher
                 xsl:value-of(select="cmd:publisher")
+        xsl:if(test="cmd:references!=''")
+            dct:references
+                xsl:value-of(select="cmd:references")
+        xsl:if(test="cmd:relation!=''")
+            dct:relation
+                xsl:value-of(select="cmd:relation")
+        xsl:if(test="cmd:replaces!=''")
+            dct:replaces
+                xsl:value-of(select="cmd:replaces")
+        xsl:if(test="cmd:requires!=''")
+            dct:requires
+                xsl:value-of(select="cmd:requires")
         xsl:if(test="cmd:rights!=''")
             dc:rights
                 xsl:value-of(select="cmd:rights")
+        xsl:if(test="cmd:rightsHolder!=''")
+            dct:rightsHolder
+                xsl:value-of(select="cmd:rightsHolder")
         xsl:if(test="cmd:source!=''")
             dc:source
                 xsl:value-of(select="cmd:source")
+        xsl:if(test="cmd:spatial!=''")
+            dct:spatial
+                xsl:value-of(select="cmd:spatial")
         xsl:if(test="cmd:subject!=''")
             dc:subject
                 xsl:value-of(select="cmd:subject")
+        xsl:if(test="cmd:tableOfContents!=''")
+            dct:tableOfContents
+                xsl:value-of(select="cmd:tableOfContents")
+        xsl:if(test="cmd:temporal!=''")
+            dct:temporal
+                xsl:value-of(select="cmd:temporal")
         xsl:if(test="cmd:title!=''")
             dc:title
                 xsl:value-of(select="cmd:title")
         xsl:if(test="cmd:type!=''")
             dc:type
                 xsl:value-of(select="cmd:type")
+        xsl:if(test="cmd:valid!=''")
+            dct:valid
+                xsl:value-of(select="cmd:valid")
 
     xsl:template(name="uri")
         xsl:param(name="u")
