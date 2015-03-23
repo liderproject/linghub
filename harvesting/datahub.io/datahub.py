@@ -15,7 +15,6 @@ blacklist = [
     'sqxfetge', 																			# spam
     'fafqwfaf', 																			# spam
     'sqxfetgea', 																			# spam
-    'printed-book-auction-catalogues', 														# spam ?
     """cosmetic-surgeon-wearing-nursing-scrubs-nursing-uniforms-
 expert-scrubs-for-safety""" 	# spam
 ]

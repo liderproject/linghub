@@ -133,7 +133,7 @@ xsl:stylesheet(version="1.0"
         xsl:if(test="cmd:coverage!=''")
             dc:coverage
                 xsl:value-of(select="cmd:coverage")
-        xsl:if(test="cmd:!='created'")
+        xsl:if(test="cmd:created!=''")
             dct:created
                 xsl:value-of(select="cmd:created")
         xsl:if(test="cmd:creator!=''")

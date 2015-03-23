@@ -170,7 +170,7 @@
         <xsl:value-of select="cmd:coverage"></xsl:value-of>
       </dc:coverage>
     </xsl:if>
-    <xsl:if test="cmd:!='created'">
+    <xsl:if test="cmd:created!=''">
       <dct:created>
         <xsl:value-of select="cmd:created"></xsl:value-of>
       </dct:created>
