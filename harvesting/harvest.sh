@@ -21,11 +21,19 @@ compile() {
     else
         CLARIN_NT_GZ=clarin/clarin.nt.gz
     fi
-    echo $CLARIN_NT_GZ
-    for f in datahub.io/datahub.nt.gz lre-map/lremap.nt.gz metashare/metashare.nt.gz $CLARIN_NT_GZ 
+    if [ -e metashare/metashare.deduped.nt.gz ]
+    then
+        METASHARE_NT_GZ=metashare/metashare.deduped.nt.gz
+    else
+        METASHARE_NT_GZ=metashare/metashare.nt.gz
+    fi
+    for f in datahub.io/datahub.nt.gz lre-map/lremap.nt.gz METASHARE_NT_GZ $CLARIN_NT_GZ 
     do
         zcat $f | python add_langs.py | gzip >> linghub.nt.gz
     done
+    cd ../deduping
+    bash dedupe-all.sh
+    cd -
 }
 
 datahub() {
@@ -74,13 +82,16 @@ lremap() {
         # zcat lre-map.html.gz > lre-map.html # zcat on OS X always appends a .Z to the filename (better use gunzip -c)
         gunzip -c lre-map.html.gz > lre-map.html
     fi
-    echo "Building RDF [1/2]"
+    echo "Building RDF [1/4]"
     python lre-map.html.py
-    echo "Converting to NT [2/2]"
-    rapper -o ntriples -I http://linghub.lider-project.eu/lremap/ lre-map.rdf 2>/dev/null | python lre-map-add-usages.py | gzip >> lremap.nt.gz
+    echo "Converting to NT [2/4]"
+    rapper -o ntriples -I http://linghub.lider-project.eu/lremap/ lre-map.rdf 2>/dev/null | python lre-map-add-usages.py > lremap.nt
+    echo "Removing Duplicates [3/4]"
+    python ../../deduping/dedupe-lremap.py lremap.nt | gzip > lremap.nt.gz
     rm lre-map.rdf
     rm lre-map.html
     cd ..
+    echo "Add 2014 Data [4/4]"
     cd lre-map2014
     python LRE-Map2014Harvester.py
     cat LREmap2014.nt | gzip >> ../lre-map/lremap.nt.gz
@@ -128,17 +139,20 @@ metashare() {
     check "rapper"
 
     cd metashare
-    echo "Extracting Data [1/2]"
+    echo "Extracting Data [1/3]"
     if [ ! -d META-SHARE_LRs ]
     then
         unzip META-SHARE_LRs.zip
     fi
 
-    echo "Running LIXR [2/2]"
+    echo "Running LIXR [2/3]"
     for f in META-SHARE_LRs/*.xml
     do
         java -jar lixr-assembly-0.1.jar metashare $f | rapper -i turtle -o ntriples -I http://$LINGHUB/metashare/ - | gzip >> metashare.nt.gz
     done
+
+    echo "Deduping META-SHARE [3/3]"
+    zcat metashare.nt.gz | python ../../deduping/metashare-dedupe.py | gzip > metashare.deduped.nt.gz
 
     cd ..
 }
