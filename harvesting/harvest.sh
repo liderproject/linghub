@@ -157,6 +157,19 @@ metashare() {
     cd ..
 }
 
+dataid() {
+    cd dataid
+
+    echo "Collecting DataID records"
+    check "rapper"
+
+    while read dataid; do
+      curl -H "Accept: application/rdf+xml" $read | rapper -o ntriples -I http://$LINGHUB/dataid/ - | python fix_urls.py $read | gzip >> dataid.nt.gz
+    done <sources.txt
+
+    cd ..
+}
+
 case "$1" in
     all)
         clean
@@ -181,11 +194,14 @@ case "$1" in
     metashare)
         metashare
         ;;
+    dataid)
+        dataid
+        ;;
     compile)
         compile
         ;;
     *) 
-        echo "Please specify a stage (all|clean|datahub|clarin|lremap|metashare|compile)"
+        echo "Please specify a stage (all|clean|datahub|clarin|lremap|metashare|dataid|compile)"
 esac
 
             
