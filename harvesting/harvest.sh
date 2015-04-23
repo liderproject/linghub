@@ -1,6 +1,7 @@
 #!/bin/bash
 
 LINGHUB=linghub.lider-project.eu
+LIXR=~/projects/lider/lixr/lixr
 
 die() { echo "$@" 1>&2 ; exit 1; }
 
@@ -27,7 +28,7 @@ compile() {
     else
         METASHARE_NT_GZ=metashare/metashare.nt.gz
     fi
-    for f in datahub.io/datahub.nt.gz lre-map/lremap.nt.gz METASHARE_NT_GZ $CLARIN_NT_GZ 
+    for f in datahub.io/datahub.nt.gz lre-map/lremap.nt.gz $METASHARE_NT_GZ $CLARIN_NT_GZ 
     do
         zcat $f | python add_langs.py | gzip >> linghub.nt.gz
     done
@@ -68,7 +69,7 @@ lremap() {
     check "python"
     check "rapper"
 
-    cd lre-map/
+    #cd lre-map/
     # For some reason this doesn't work with wget!
     #curl http://www.resourcebook.eu/lremap/owl/lremap.zip > lremap.zip || die "Could not download LRE-Map data"
     #mkdir data/
@@ -76,21 +77,21 @@ lremap() {
     #python lre-map.new.py
     #Give up Riccardo's RDF dump is currently too FUBAR
 
-    ls -lh
-    if [ ! -e lre-map.html ]
-    then
-        # zcat lre-map.html.gz > lre-map.html # zcat on OS X always appends a .Z to the filename (better use gunzip -c)
-        gunzip -c lre-map.html.gz > lre-map.html
-    fi
-    echo "Building RDF [1/4]"
-    python lre-map.html.py
-    echo "Converting to NT [2/4]"
-    rapper -o ntriples -I http://linghub.lider-project.eu/lremap/ lre-map.rdf 2>/dev/null | python lre-map-add-usages.py > lremap.nt
-    echo "Removing Duplicates [3/4]"
-    python ../../deduping/dedupe-lremap.py lremap.nt | gzip > lremap.nt.gz
-    rm lre-map.rdf
-    rm lre-map.html
-    cd ..
+    #ls -lh
+    #if [ ! -e lre-map.html ]
+    #then
+    #    # zcat lre-map.html.gz > lre-map.html # zcat on OS X always appends a .Z to the filename (better use gunzip -c)
+    #    gunzip -c lre-map.html.gz > lre-map.html
+    #fi
+    #echo "Building RDF [1/4]"
+    #python lre-map.html.py
+    #echo "Converting to NT [2/4]"
+    #rapper -o ntriples -I http://linghub.lider-project.eu/lremap/ lre-map.rdf 2>/dev/null | python lre-map-add-usages.py > lremap.nt
+    #echo "Removing Duplicates [3/4]"
+    #python ../../deduping/dedupe-lremap.py lremap.nt | gzip > lremap.nt.gz
+    #rm lre-map.rdf
+    #rm lre-map.html
+    #cd ..
     echo "Add 2014 Data [4/4]"
     cd lre-map2014
     python LRE-Map2014Harvester.py
@@ -106,15 +107,15 @@ clarin() {
     check "rapper"
 
     cd clarin
-    echo "Downloading Data [1/3]"
+    echo "Downloading Data [1/4]"
     wget http://catalog.clarin.eu/oai-harvester/resultsets/clarin.tar.bz2
     wget http://catalog.clarin.eu/oai-harvester/resultsets/others.tar.bz2
 
-    echo "Extracting Data [2/3]"
+    echo "Extracting Data [2/4]"
     tar xjvf clarin.tar.bz2
     tar xjvf others.tar.bz2
 
-    echo "Converting Data [3/3]"
+    echo "Converting Data [3/4]"
     for f in `find results/cmdi -name \*.xml`
     do
         RES_NAME2=${f/%.xml/}
@@ -131,6 +132,11 @@ clarin() {
         fi
     done
     cd ..
+
+    echo "Deduplicating [4/4]"
+    cd ../deduping
+    bash dedupe-clarin.sh
+    cd -
 }
 
 metashare() {
@@ -170,6 +176,24 @@ dataid() {
     cd ..
 }
 
+elra() {
+    echo "Starting export of ELRA"
+    check "java"
+    check "rapper"
+    check $LIXR
+    check "wget"
+
+    cd elra
+
+    echo "Downloading Data [1/2]"
+    rm -f elra_catalogue.xml
+    wget http://catalog.elra.info/elrac/elra_catalogue.xml
+
+    echo "Converting Data [2/2]"
+    $LIXR elra.scala elra_catalogue.xml | rapper -i turtle -o ntriples -I http://linghub.org/elra/ - | gzip > elra.nt.gz
+}
+
+
 case "$1" in
     all)
         clean
@@ -196,6 +220,9 @@ case "$1" in
         ;;
     dataid)
         dataid
+        ;;
+    elra)
+        elra
         ;;
     compile)
         compile

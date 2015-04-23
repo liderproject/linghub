@@ -41,7 +41,7 @@ for line in type_label_to_bnss.readlines():
 for line in sys.stdin:
     print(line.strip())
     elems = line.split(" ")
-    if elems[1] == "<http://purl.org/dc/elements/1.1/language>":
+    if len(elems) > 2 and elems[1] == "<http://purl.org/dc/elements/1.1/language>":
         lang = (" ".join(elems[2:-1]))[1:-1]
         if lang in langs:
             print_lang(elems[0], langs[lang])
@@ -49,7 +49,7 @@ for line in sys.stdin:
             for l in re.split("[,;]", lang):
                 if l in langs:
                     print_lang(elems[0], langs[l])
-    elif elems[1] == "<http://purl.org/dc/elements/1.1/type>":
+    elif len(elems) > 2 and elems[1] == "<http://purl.org/dc/elements/1.1/type>":
         typ = (" ".join(elems[2:-1]))[1:-1]
         if typ in bnss:
             for bn in bnss[typ]:

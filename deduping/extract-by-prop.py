@@ -18,6 +18,8 @@ uris = {}
 
 for line in sys.stdin.readlines():
     elems = line.split(" ")
+    if len(elems) <= 2:
+        continue
     ob = " ".join(elems[2:-1]).replace("\t", " ").lower()
     if re.match("(.*)@[A-Za-z0-9\-]+$", ob):
         ob = re.match("(.*)@[A-Za-z0-9\-]+$", ob).group(1)
