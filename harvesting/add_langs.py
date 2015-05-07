@@ -14,6 +14,12 @@ def print_type(uri, lang):
           "<http://babelnet.org/rdf/s%s> ." % (uri, lang))
 
 
+def print_ms_type(uri, lang):
+    sys.stderr.write("%s\n" % lang)
+    print("%s <http://purl.org/dc/terms/type> "
+          "<http://purl.org/net/def/metashare#%s> ." % (uri, lang))
+
+
 langs = {}
 lang_map = open("lang-map.json")
 for line in lang_map.readlines():
@@ -22,13 +28,19 @@ for line in lang_map.readlines():
         langs[obj["original"]] = obj["id"]
 
 true_bnss = set([])
+true_mn = set([])
+bn_ns = {}
 babelnet_types = open("babelnet-types.csv")
 for line in babelnet_types.readlines():
     elems = line.strip().split(",")
     if elems[2] == "y":
         true_bnss.add(elems[0])
+    if elems[3] != "":
+        true_mn.add(elems[0])
+        bn_ns[elems[0]] = elems[3]
 
 bnss = {}
+mns = {}
 type_label_to_bnss = open("type-label-tobnss.tsv")
 for line in type_label_to_bnss.readlines():
     elems = line.strip().split("\t")
@@ -36,7 +48,10 @@ for line in type_label_to_bnss.readlines():
         if elems[0] not in bnss:
             bnss[elems[0]] = []
         bnss[elems[0]].append(elems[1])
-
+    if elems[1] in true_mn:
+        if elems[0] not in mns:
+            mns[elems[0]] = []
+        mns[elems[0]].append(bn_ns[elems[1]])
 
 for line in sys.stdin:
     print(line.strip())
@@ -54,3 +69,7 @@ for line in sys.stdin:
         if typ in bnss:
             for bn in bnss[typ]:
                 print_type(elems[0], bn[3:])
+        if typ in mns:
+            for mn in mns[typ]:
+                print_ms_type(elems[0], mn)
+
