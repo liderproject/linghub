@@ -191,7 +191,31 @@ elra() {
 
     echo "Converting Data [2/2]"
     $LIXR elra.scala elra_catalogue.xml | rapper -i turtle -o ntriples -I http://linghub.org/elra/ - | gzip > elra.nt.gz
+
+    cd ..
 }
+
+olac() {
+    echo "Starting export of OLAC"
+    check "java"
+    check "rapper"
+    check $LIXR
+    check "wget"
+
+    cd olac
+
+    echo "Downloading Data [1/2]"
+#   Download is broken again!
+#    rm -f ListRecords.xml*
+#    wget http://www.language-archives.org/xmldump/ListRecords.xml.gz
+#    gunzip ListRecords.xml.gz
+
+    echo "Converting Data [2/2]"
+    $LIXR olac.scala ListRecords.xml | rapper -i turtle -o ntriples -I http://linghub.org/olac/ - | gzip > olac.nt.gz
+
+    cd ..
+}
+
 
 
 case "$1" in
@@ -223,6 +247,9 @@ case "$1" in
         ;;
     elra)
         elra
+        ;;
+    olac)
+        olac
         ;;
     compile)
         compile

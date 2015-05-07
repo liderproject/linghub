@@ -1,9 +1,11 @@
 import urllib2
 import json
 import os
+import re
 from urllib2 import Request
-from rdflib import Graph, BNode, RDFS, Namespace, URIRef, RDF
+from rdflib import Graph, BNode, RDFS, Namespace, URIRef, RDF, Literal
 
+DCT = Namespace("http://purl.org/dc/terms/")
 
 if not os.path.exists("data"):
     os.mkdir("data")
@@ -43,8 +45,13 @@ def fixCkan(g, url):
     VOID = Namespace("http://rdfs.org/ns/void#")
     n_linksets = 1
     for s, p, o in g:
+        if p == DCT.description:
+            o = Literal(re.sub("<br/?>", "\n", o.value))
         if isinstance(s, BNode) and p == RDF.value:
-            label = g.objects(s, RDFS.label).next()
+            try:
+                label = g.objects(s, RDFS.label).next()
+            except:
+                pass
             if str(label) == "triples":
                 print(o)
                 g.add((URIRef(url), VOID.triples, o))
