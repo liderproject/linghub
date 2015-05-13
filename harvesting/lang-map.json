@@ -48,11 +48,11 @@
 {"rank":1,"original":"Spanish","input":"spanish","id":"spa","match":"spanish"}
 {"rank":2,"original":" Castilian","input":"castilian","id":"spa","match":"spanish"}
 {"rank":1,"original":"Basque","input":"basque","id":"eus","match":"basque"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"greek"}
 {"rank":0.7586206896551724,"original":" Modern (1453-)","input":"modern (1453-)","id":"ell","match":"modern greek (1453-)"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"greek"}
 {"rank":0.6666666666666666,"original":" Ancient","input":"ancient","id":"hbo","match":"ancient hebrew"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"greek"}
 {"rank":0.7878787878787878,"original":" Ancient (to 1453)","input":"ancient (to 1453)","id":"grc","match":"ancient greek (to 1453)"}
 {"rank":1,"original":"Slovak","input":"slovak","id":"slk","match":"slovak"}
 {"rank":1,"original":"Mandarin Chinese","input":"mandarin chinese","id":"cmn","match":"mandarin chinese"}
@@ -81,7 +81,7 @@
 {"rank":0.6666666666666666,"original":" Middle High","input":"middle high","id":"htx","match":"middle hittite"}
 {"rank":1,"original":"Dutch","input":"dutch","id":"nld","match":"dutch"}
 {"rank":0.6,"original":" Flemish","input":"flemish","id":"lei","match":"lemio"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"greek"}
 {"rank":1,"original":"Urdu","input":"urdu","id":"urd","match":"urdu"}
 {"rank":0.5714285714285714,"original":"Bokmål","input":"bokmål","id":"bok","match":"bok"}
 {"rank":1,"original":" Norwegian","input":"norwegian","id":"nor","match":"norwegian"}
@@ -238,7 +238,7 @@
 {"rank":1,"original":"German","input":"german","id":"deu","match":"german"}
 {"rank":1,"original":"Spanish","input":"spanish","id":"spa","match":"spanish"}
 {"rank":1,"original":"Italian","input":"italian","id":"ita","match":"italian"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"greek"}
 {"rank":1,"original":"Dutch","input":"dutch","id":"nld","match":"dutch"}
 {"rank":1,"original":"Czech","input":"czech","id":"ces","match":"czech"}
 {"rank":1,"original":"Lithuanian","input":"lithuanian","id":"lit","match":"lithuanian"}
@@ -1037,7 +1037,7 @@
 {"rank":1,"original":"Latvian","input":"latvian","id":"lav","match":"latvian"}
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"Latin","input":"latin","id":"lat","match":"latin"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"greek"}
 {"rank":1,"original":"Gothic","input":"gothic","id":"got","match":"gothic"}
 {"rank":1,"original":"Armenian","input":"armenian","id":"hye","match":"armenian"}
 {"rank":0.7407407407407407,"original":"Old Church Slavonic","input":"old church slavonic","id":"chu","match":"church slavic"}
@@ -1126,10 +1126,10 @@
 {"rank":1,"original":"Gujarati","input":"gujarati","id":"guj","match":"gujarati"}
 {"rank":1,"original":"guh","input":"guh","id":"guh","match":"guh"}
 {"rank":1,"original":" spa","input":"spa","id":"spa","match":"spa"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"greek"}
 {"rank":1,"original":"German","input":"german","id":"deu","match":"german"}
 {"rank":1,"original":"Italian","input":"italian","id":"ita","match":"italian"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Bulgarian","input":"bulgarian","id":"bul","match":"bulgarian"}
 {"rank":1,"original":"Romanian","input":"romanian","id":"ron","match":"romanian"}
 {"rank":1,"original":"Turkish","input":"turkish","id":"tur","match":"turkish"}
@@ -1220,7 +1220,7 @@
 {"rank":1,"original":" German","input":"german","id":"deu","match":"german"}
 {"rank":1,"original":" Danish","input":"danish","id":"dan","match":"danish"}
 {"rank":1,"original":" Swedish","input":"swedish","id":"swe","match":"swedish"}
-{"rank":0.75,"original":" Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":" Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":" Finnish","input":"finnish","id":"fin","match":"finnish"}
 {"rank":1,"original":"French","input":"french","id":"fra","match":"french"}
 {"rank":1,"original":"Italian","input":"italian","id":"ita","match":"italian"}
@@ -1620,7 +1620,7 @@
 {"rank":1,"original":"Arabic","input":"arabic","id":"ara","match":"arabic"}
 {"rank":0.7692307692307693,"original":"Armenic","input":"armenic","id":"hye","match":"armenian"}
 {"rank":1,"original":"Bulgarian","input":"bulgarian","id":"bul","match":"bulgarian"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Hungarian","input":"hungarian","id":"hun","match":"hungarian"}
 {"rank":1,"original":"Polish","input":"polish","id":"pol","match":"polish"}
 {"rank":1,"original":"Latin","input":"latin","id":"lat","match":"latin"}
@@ -1864,7 +1864,7 @@
 {"rank":1,"original":"Italian","input":"italian","id":"ita","match":"italian"}
 {"rank":1,"original":"Danish","input":"danish","id":"dan","match":"danish"}
 {"rank":1,"original":" German","input":"german","id":"deu","match":"german"}
-{"rank":0.75,"original":" Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":" Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":" English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":" Spanish","input":"spanish","id":"spa","match":"spanish"}
 {"rank":1,"original":" Finnish","input":"finnish","id":"fin","match":"finnish"}
@@ -1880,7 +1880,7 @@
 {"rank":1,"original":"Danish","input":"danish","id":"dan","match":"danish"}
 {"rank":1,"original":" Dutch","input":"dutch","id":"nld","match":"dutch"}
 {"rank":1,"original":" German","input":"german","id":"deu","match":"german"}
-{"rank":0.75,"original":" Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":" Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":" Italian","input":"italian","id":"ita","match":"italian"}
 {"rank":1,"original":" Portuguese","input":"portuguese","id":"por","match":"portuguese"}
 {"rank":1,"original":" Spanish","input":"spanish","id":"spa","match":"spanish"}
@@ -1939,7 +1939,7 @@
 {"rank":0.8181818181818182,"original":"Cuzco Quechua","input":"cuzco quechua","id":"quz","match":"cusco quechua"}
 {"rank":1,"original":"Croatian","input":"croatian","id":"hrv","match":"croatian"}
 {"rank":1,"original":"Estonian","input":"estonian","id":"est","match":"estonian"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Latvian","input":"latvian","id":"lav","match":"latvian"}
 {"rank":1,"original":"Lithuanian","input":"lithuanian","id":"lit","match":"lithuanian"}
 {"rank":1,"original":"Slovenian","input":"slovenian","id":"slv","match":"slovenian"}
@@ -1950,7 +1950,7 @@
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"Estonian","input":"estonian","id":"est","match":"estonian"}
 {"rank":1,"original":"German","input":"german","id":"deu","match":"german"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Latvian","input":"latvian","id":"lav","match":"latvian"}
 {"rank":1,"original":"Lithuanian","input":"lithuanian","id":"lit","match":"lithuanian"}
 {"rank":1,"original":"Romanian","input":"romanian","id":"ron","match":"romanian"}
@@ -1979,7 +1979,7 @@
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"Finnish","input":"finnish","id":"fin","match":"finnish"}
 {"rank":1,"original":"French","input":"french","id":"fra","match":"french"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Indonesian","input":"indonesian","id":"ind","match":"indonesian"}
 {"rank":1,"original":"Latin","input":"latin","id":"lat","match":"latin"}
 {"rank":1,"original":"Spanish","input":"spanish","id":"spa","match":"spanish"}
@@ -1991,7 +1991,7 @@
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"Finnish","input":"finnish","id":"fin","match":"finnish"}
 {"rank":1,"original":"French","input":"french","id":"fra","match":"french"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Indonesian","input":"indonesian","id":"ind","match":"indonesian"}
 {"rank":1,"original":"Latin","input":"latin","id":"lat","match":"latin"}
 {"rank":1,"original":"Spanish","input":"spanish","id":"spa","match":"spanish"}
@@ -2042,7 +2042,7 @@
 {"rank":1,"original":"Danish","input":"danish","id":"dan","match":"danish"}
 {"rank":1,"original":"German","input":"german","id":"deu","match":"german"}
 {"rank":1,"original":"Estonian","input":"estonian","id":"est","match":"estonian"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"French","input":"french","id":"fra","match":"french"}
 {"rank":1,"original":"Italian","input":"italian","id":"ita","match":"italian"}
@@ -2250,7 +2250,7 @@
 {"rank":0.6666666666666666,"original":"All eleven official South African languages","input":"all eleven official south african languages","id":"sfs","match":"south african sign language"}
 {"rank":1,"original":"Albanian","input":"albanian","id":"sqi","match":"albanian"}
 {"rank":1,"original":"Bulgarian","input":"bulgarian","id":"bul","match":"bulgarian"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"Romanian","input":"romanian","id":"ron","match":"romanian"}
 {"rank":1,"original":"Macedonian","input":"macedonian","id":"mkd","match":"macedonian"}
@@ -2298,7 +2298,7 @@
 {"rank":1,"original":" Finnish","input":"finnish","id":"fin","match":"finnish"}
 {"rank":1,"original":" French","input":"french","id":"fra","match":"french"}
 {"rank":1,"original":" German","input":"german","id":"deu","match":"german"}
-{"rank":0.75,"original":" Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":" Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":" Italian","input":"italian","id":"ita","match":"italian"}
 {"rank":1,"original":" Macedonian","input":"macedonian","id":"mkd","match":"macedonian"}
 {"rank":1,"original":" Portuguese","input":"portuguese","id":"por","match":"portuguese"}
@@ -2337,7 +2337,7 @@
 {"rank":1,"original":"Welsh","input":"welsh","id":"cym","match":"welsh"}
 {"rank":1,"original":"Danish","input":"danish","id":"dan","match":"danish"}
 {"rank":1,"original":"German","input":"german","id":"deu","match":"german"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"Spanish","input":"spanish","id":"spa","match":"spanish"}
 {"rank":1,"original":"Estonian","input":"estonian","id":"est","match":"estonian"}
@@ -2409,7 +2409,7 @@
 {"rank":1,"original":"Galician","input":"galician","id":"glg","match":"galician"}
 {"rank":1,"original":"Georgian","input":"georgian","id":"kat","match":"georgian"}
 {"rank":1,"original":"German","input":"german","id":"deu","match":"german"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Guarani","input":"guarani","id":"grn","match":"guarani"}
 {"rank":1,"original":"Gujarati","input":"gujarati","id":"guj","match":"gujarati"}
 {"rank":1,"original":"Hebrew","input":"hebrew","id":"heb","match":"hebrew"}
@@ -2527,11 +2527,11 @@
 {"rank":1,"original":"Spanish","input":"spanish","id":"spa","match":"spanish"}
 {"rank":2,"original":" Castilian","input":"castilian","id":"spa","match":"spanish"}
 {"rank":1,"original":"Basque","input":"basque","id":"eus","match":"basque"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":0.7586206896551724,"original":" Modern (1453-)","input":"modern (1453-)","id":"ell","match":"modern greek (1453-)"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":0.6666666666666666,"original":" Ancient","input":"ancient","id":"hbo","match":"ancient hebrew"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":0.7878787878787878,"original":" Ancient (to 1453)","input":"ancient (to 1453)","id":"grc","match":"ancient greek (to 1453)"}
 {"rank":1,"original":"Slovak","input":"slovak","id":"slk","match":"slovak"}
 {"rank":1,"original":"Mandarin Chinese","input":"mandarin chinese","id":"cmn","match":"mandarin chinese"}
@@ -2560,7 +2560,7 @@
 {"rank":0.6666666666666666,"original":" Middle High","input":"middle high","id":"htx","match":"middle hittite"}
 {"rank":1,"original":"Dutch","input":"dutch","id":"nld","match":"dutch"}
 {"rank":0.6,"original":" Flemish","input":"flemish","id":"lei","match":"lemio"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Urdu","input":"urdu","id":"urd","match":"urdu"}
 {"rank":0.5714285714285714,"original":"Bokmål","input":"bokmål","id":"bok","match":"bok"}
 {"rank":1,"original":" Norwegian","input":"norwegian","id":"nor","match":"norwegian"}
@@ -2717,7 +2717,7 @@
 {"rank":1,"original":"German","input":"german","id":"deu","match":"german"}
 {"rank":1,"original":"Spanish","input":"spanish","id":"spa","match":"spanish"}
 {"rank":1,"original":"Italian","input":"italian","id":"ita","match":"italian"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Dutch","input":"dutch","id":"nld","match":"dutch"}
 {"rank":1,"original":"Czech","input":"czech","id":"ces","match":"czech"}
 {"rank":1,"original":"Lithuanian","input":"lithuanian","id":"lit","match":"lithuanian"}
@@ -3516,7 +3516,7 @@
 {"rank":1,"original":"Latvian","input":"latvian","id":"lav","match":"latvian"}
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"Latin","input":"latin","id":"lat","match":"latin"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Gothic","input":"gothic","id":"got","match":"gothic"}
 {"rank":1,"original":"Armenian","input":"armenian","id":"hye","match":"armenian"}
 {"rank":0.7407407407407407,"original":"Old Church Slavonic","input":"old church slavonic","id":"chu","match":"church slavic"}
@@ -3605,10 +3605,10 @@
 {"rank":1,"original":"Gujarati","input":"gujarati","id":"guj","match":"gujarati"}
 {"rank":1,"original":"guh","input":"guh","id":"guh","match":"guh"}
 {"rank":1,"original":" spa","input":"spa","id":"spa","match":"spa"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"German","input":"german","id":"deu","match":"german"}
 {"rank":1,"original":"Italian","input":"italian","id":"ita","match":"italian"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Bulgarian","input":"bulgarian","id":"bul","match":"bulgarian"}
 {"rank":1,"original":"Romanian","input":"romanian","id":"ron","match":"romanian"}
 {"rank":1,"original":"Turkish","input":"turkish","id":"tur","match":"turkish"}
@@ -3699,7 +3699,7 @@
 {"rank":1,"original":" German","input":"german","id":"deu","match":"german"}
 {"rank":1,"original":" Danish","input":"danish","id":"dan","match":"danish"}
 {"rank":1,"original":" Swedish","input":"swedish","id":"swe","match":"swedish"}
-{"rank":0.75,"original":" Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":" Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":" Finnish","input":"finnish","id":"fin","match":"finnish"}
 {"rank":1,"original":"French","input":"french","id":"fra","match":"french"}
 {"rank":1,"original":"Italian","input":"italian","id":"ita","match":"italian"}
@@ -4099,7 +4099,7 @@
 {"rank":1,"original":"Arabic","input":"arabic","id":"ara","match":"arabic"}
 {"rank":0.7692307692307693,"original":"Armenic","input":"armenic","id":"hye","match":"armenian"}
 {"rank":1,"original":"Bulgarian","input":"bulgarian","id":"bul","match":"bulgarian"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Hungarian","input":"hungarian","id":"hun","match":"hungarian"}
 {"rank":1,"original":"Polish","input":"polish","id":"pol","match":"polish"}
 {"rank":1,"original":"Latin","input":"latin","id":"lat","match":"latin"}
@@ -4343,7 +4343,7 @@
 {"rank":1,"original":"Italian","input":"italian","id":"ita","match":"italian"}
 {"rank":1,"original":"Danish","input":"danish","id":"dan","match":"danish"}
 {"rank":1,"original":" German","input":"german","id":"deu","match":"german"}
-{"rank":0.75,"original":" Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":" Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":" English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":" Spanish","input":"spanish","id":"spa","match":"spanish"}
 {"rank":1,"original":" Finnish","input":"finnish","id":"fin","match":"finnish"}
@@ -4359,7 +4359,7 @@
 {"rank":1,"original":"Danish","input":"danish","id":"dan","match":"danish"}
 {"rank":1,"original":" Dutch","input":"dutch","id":"nld","match":"dutch"}
 {"rank":1,"original":" German","input":"german","id":"deu","match":"german"}
-{"rank":0.75,"original":" Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":" Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":" Italian","input":"italian","id":"ita","match":"italian"}
 {"rank":1,"original":" Portuguese","input":"portuguese","id":"por","match":"portuguese"}
 {"rank":1,"original":" Spanish","input":"spanish","id":"spa","match":"spanish"}
@@ -4418,7 +4418,7 @@
 {"rank":0.8181818181818182,"original":"Cuzco Quechua","input":"cuzco quechua","id":"quz","match":"cusco quechua"}
 {"rank":1,"original":"Croatian","input":"croatian","id":"hrv","match":"croatian"}
 {"rank":1,"original":"Estonian","input":"estonian","id":"est","match":"estonian"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Latvian","input":"latvian","id":"lav","match":"latvian"}
 {"rank":1,"original":"Lithuanian","input":"lithuanian","id":"lit","match":"lithuanian"}
 {"rank":1,"original":"Slovenian","input":"slovenian","id":"slv","match":"slovenian"}
@@ -4429,7 +4429,7 @@
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"Estonian","input":"estonian","id":"est","match":"estonian"}
 {"rank":1,"original":"German","input":"german","id":"deu","match":"german"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Latvian","input":"latvian","id":"lav","match":"latvian"}
 {"rank":1,"original":"Lithuanian","input":"lithuanian","id":"lit","match":"lithuanian"}
 {"rank":1,"original":"Romanian","input":"romanian","id":"ron","match":"romanian"}
@@ -4458,7 +4458,7 @@
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"Finnish","input":"finnish","id":"fin","match":"finnish"}
 {"rank":1,"original":"French","input":"french","id":"fra","match":"french"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Indonesian","input":"indonesian","id":"ind","match":"indonesian"}
 {"rank":1,"original":"Latin","input":"latin","id":"lat","match":"latin"}
 {"rank":1,"original":"Spanish","input":"spanish","id":"spa","match":"spanish"}
@@ -4470,7 +4470,7 @@
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"Finnish","input":"finnish","id":"fin","match":"finnish"}
 {"rank":1,"original":"French","input":"french","id":"fra","match":"french"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Indonesian","input":"indonesian","id":"ind","match":"indonesian"}
 {"rank":1,"original":"Latin","input":"latin","id":"lat","match":"latin"}
 {"rank":1,"original":"Spanish","input":"spanish","id":"spa","match":"spanish"}
@@ -4521,7 +4521,7 @@
 {"rank":1,"original":"Danish","input":"danish","id":"dan","match":"danish"}
 {"rank":1,"original":"German","input":"german","id":"deu","match":"german"}
 {"rank":1,"original":"Estonian","input":"estonian","id":"est","match":"estonian"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"French","input":"french","id":"fra","match":"french"}
 {"rank":1,"original":"Italian","input":"italian","id":"ita","match":"italian"}
@@ -4729,7 +4729,7 @@
 {"rank":0.6666666666666666,"original":"All eleven official South African languages","input":"all eleven official south african languages","id":"sfs","match":"south african sign language"}
 {"rank":1,"original":"Albanian","input":"albanian","id":"sqi","match":"albanian"}
 {"rank":1,"original":"Bulgarian","input":"bulgarian","id":"bul","match":"bulgarian"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"Romanian","input":"romanian","id":"ron","match":"romanian"}
 {"rank":1,"original":"Macedonian","input":"macedonian","id":"mkd","match":"macedonian"}
@@ -4777,7 +4777,7 @@
 {"rank":1,"original":" Finnish","input":"finnish","id":"fin","match":"finnish"}
 {"rank":1,"original":" French","input":"french","id":"fra","match":"french"}
 {"rank":1,"original":" German","input":"german","id":"deu","match":"german"}
-{"rank":0.75,"original":" Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":" Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":" Italian","input":"italian","id":"ita","match":"italian"}
 {"rank":1,"original":" Macedonian","input":"macedonian","id":"mkd","match":"macedonian"}
 {"rank":1,"original":" Portuguese","input":"portuguese","id":"por","match":"portuguese"}
@@ -4816,7 +4816,7 @@
 {"rank":1,"original":"Welsh","input":"welsh","id":"cym","match":"welsh"}
 {"rank":1,"original":"Danish","input":"danish","id":"dan","match":"danish"}
 {"rank":1,"original":"German","input":"german","id":"deu","match":"german"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"English","input":"english","id":"eng","match":"english"}
 {"rank":1,"original":"Spanish","input":"spanish","id":"spa","match":"spanish"}
 {"rank":1,"original":"Estonian","input":"estonian","id":"est","match":"estonian"}
@@ -4888,7 +4888,7 @@
 {"rank":1,"original":"Galician","input":"galician","id":"glg","match":"galician"}
 {"rank":1,"original":"Georgian","input":"georgian","id":"kat","match":"georgian"}
 {"rank":1,"original":"German","input":"german","id":"deu","match":"german"}
-{"rank":0.75,"original":"Greek","input":"greek","id":"mus","match":"creek"}
+{"rank":0.75,"original":"Greek","input":"greek","id":"ell","match":"creek"}
 {"rank":1,"original":"Guarani","input":"guarani","id":"grn","match":"guarani"}
 {"rank":1,"original":"Gujarati","input":"gujarati","id":"guj","match":"gujarati"}
 {"rank":1,"original":"Hebrew","input":"hebrew","id":"heb","match":"hebrew"}
