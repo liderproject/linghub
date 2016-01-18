@@ -40,19 +40,28 @@ def rdfFromCkan(url):
     return g
 
 
-def fixCkan(g, url):
+def fixCkan(g2, url):
     """Align the CKAN data with DataID"""
     VOID = Namespace("http://rdfs.org/ns/void#")
+    g = Graph()
+    for s, p, o in g2:
+        g.add((s, p, o))
     n_linksets = 1
-    for s, p, o in g:
-        if p == DCT.description:
+    for s, p, o in g2:
+        if p == DCT.description and isinstance(o, Literal):
             o = Literal(re.sub("<br/?>", "\n", o.value))
+            g.remove((s, DCT.description, None))
+            g.add((s, DCT.description, o))
         if isinstance(s, BNode) and p == RDF.value:
             try:
+                if len(list(g.objects(s, RDFS.label))) != 1:
+                    for o in g.objects(s, RDFS.label):
+                        print(s + " " + o)
                 label = g.objects(s, RDFS.label).next()
             except:
                 pass
             if str(label) == "triples":
+                print(str(label))
                 print(o)
                 g.add((URIRef(url), VOID.triples, o))
                 g.remove((None, None, s))
@@ -66,6 +75,10 @@ def fixCkan(g, url):
                        URIRef("http://linghub.lider-project.eu/datahub/" +
                               label[6:])))
                 n_linksets += 1
+                g.remove((None, None, s))
+                g.remove((s, None, None))
+            elif str(label) == "license":
+                g.add((URIRef(url), DCT.license, URIRef(str(o))))
                 g.remove((None, None, s))
                 g.remove((s, None, None))
     return g
@@ -94,7 +107,6 @@ for tag in ["llod", "linguistics%20lod", "lexicon", "corpus", "thesaurus",
 
 datasets = set(datasets) - set(blacklist)
 print "- blacklist: "+str(len(datasets))+" datasets"
-
 
 for dataset in datasets:
     print(dataset)

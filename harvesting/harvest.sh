@@ -124,7 +124,7 @@ clarin() {
         if grep -q DcmiTerms $f
         then
             echo "Resource: $RES_NAME"
-            xsltproc clarin2dcat.xsl $f | rapper -o ntriples -I http://$LINGHUB/clarin/$RES_NAME - 2>/dev/null |  gzip >> clarin.nt.gz
+            xsltproc clarin2dcat.xsl $f | rapper -o ntriples -I http://$LINGHUB/clarin/$RES_NAME - 2>/dev/null |  grep -v "Nederands_Instituut_voor_Beeld_en_Geluid_OAI_PMH_repository/oai_beeldengeluid_nl_Expressie_kassa" | gzip >> clarin.nt.gz
             echo "<http://$LINGHUB/clarin/$RES_NAME> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://catalog.clarin.eu/oai-harvester/others/results/cmdi/$RES_NAME.xml> ." | gzip >> clarin.nt.gz
             echo "<http://$LINGHUB/clarin/$RES_NAME> <http://purl.org/dc/elements/1.1/source> \"${SOURCE//_/ } (via CLARIN VLO)\" ." | gzip >> clarin.nt.gz
         else
@@ -216,6 +216,17 @@ olac() {
     cd ..
 }
 
+langcodes() {
+    echo "Extracting lang codes"
+
+    if [ -f LanguageCodes.tab ]
+    then
+        wget http://www.ethnologue.com/sites/default/files/LanguageCodes.tab
+    fi
+
+    python lang-labels.py < LanguageCodes.tab | gzip >> linghub.nt.gz
+}
+
 
 
 case "$1" in
@@ -226,6 +237,7 @@ case "$1" in
         metashare
         clarin
         compile
+        langcodes
         ;;
     clean)
         clean
@@ -253,6 +265,9 @@ case "$1" in
         ;;
     compile)
         compile
+        ;;
+    langcodes)
+        langcodes
         ;;
     *) 
         echo "Please specify a stage (all|clean|datahub|clarin|lremap|metashare|dataid|compile)"
