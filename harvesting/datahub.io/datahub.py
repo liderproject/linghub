@@ -10,7 +10,7 @@ DCT = Namespace("http://purl.org/dc/terms/")
 if not os.path.exists("data"):
     os.mkdir("data")
 
-baseURL = "http://datahub.io/api/3/action/"
+baseURL = "https://old.datahub.io/api/3/action/"
 blacklist = [
     'ss', 																					# spam
     'cgsddforja', 																			# spam
@@ -21,16 +21,19 @@ blacklist = [
 expert-scrubs-for-safety""" 	# spam
 ]
 
+def url2json(url):
+    return json.loads(urllib2.urlopen(urllib2.Request(url, headers={'User-Agent': 'python'})).read())
+
 
 def ckanListDatasetsInGroup(group):
-    url = baseURL + "group_show?id=" + group
-    return json.loads(urllib2.urlopen(url).read())
+    url = baseURL + "package_search?rows=200&fq=organization:" + group
+    return url2json(url)
 
 
 def ckanListDatasetsForTag(tag):
-    url = baseURL + "tag_show?id=" + tag
-    return json.loads(urllib2.urlopen(url).read())
-
+    #url = baseURL + "tag_show?id=" + tag
+    url = baseURL + "package_search?rows=200&fq=tags:" + tag
+    return url2json(url)
 
 def rdfFromCkan(url):
     r = Request(url)
@@ -88,11 +91,11 @@ nodes = {}
 # NEW: check not only group data sets, but everything with a corresponding tag
 
 datasetJSON = ckanListDatasetsInGroup("owlg")
-datasets = [ds["name"] for ds in datasetJSON["result"]["packages"]]
+datasets = [ds["name"] for ds in datasetJSON["result"]["results"]] + ["dbpedia"]
 print "group 'owlg': "+str(len(datasets))+" datasets"
 for group in ["mlode2012", "sfb673"]:
     newDatasetJSON = ckanListDatasetsInGroup(group)
-    newDatasets = [ds["name"] for ds in newDatasetJSON["result"]["packages"]]
+    newDatasets = [ds["name"] for ds in newDatasetJSON["result"]["results"]]
     datasets = datasets + newDatasets
     datasets = list(set(datasets))
     print "+ group '"+group+"': "+str(len(datasets))+" datasets"
@@ -100,7 +103,7 @@ for tag in ["llod", "linguistics%20lod", "lexicon", "corpus", "thesaurus",
             "isocat", "linguistic", "linguistics", "typology", "lrec-2014",
             "lexical-resources"]:
     newDatasetJSON = ckanListDatasetsForTag(tag)
-    newDatasets = [ds["name"] for ds in newDatasetJSON["result"]["packages"]]
+    newDatasets = [ds["name"] for ds in newDatasetJSON["result"]["results"]]
     datasets = datasets + newDatasets
     datasets = list(set(datasets))
     print "+ tag '"+tag+"': "+str(len(datasets))+" datasets"
@@ -110,7 +113,7 @@ print "- blacklist: "+str(len(datasets))+" datasets"
 
 for dataset in datasets:
     print(dataset)
-    url = "http://datahub.io/dataset/%s" % dataset
+    url = "https://old.datahub.io/dataset/%s.rdf" % dataset
     rdf = fixCkan(rdfFromCkan(url), url)
     with open("data/%s.rdf" % dataset, "w") as out:
         rdf.serialize(out)
